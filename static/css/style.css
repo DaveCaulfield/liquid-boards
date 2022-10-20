@@ -1,0 +1,20 @@
+body {
+    background-color: #E9F0F2;
+  }
+
+
+
+  .home-background-image {
+    background-image: url("https://res.cloudinary.com/dwobtnj0v/raw/upload/v1653065789/static/css/style.2a1629c4b38e.css");
+    /*The image used */
+    height: 1200px;
+    /* You must set a specified height */
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+  }
