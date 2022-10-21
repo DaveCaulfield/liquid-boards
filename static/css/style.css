@@ -15,7 +15,40 @@ body {
   .cover {
     object-fit: cover;
     width: 100vw;
-    height: 350px;
+    height: 30vh;
   }
 
+  .sunset{
+    object-fit: cover;
+    width: 60vw;
+    height: 60vh;
+  }
+
+
+
+  button {
+    background: black;
+    box-sizing: border-box;
+    border-radius: 0.6rem;
+    align-self: center;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 20px;
+    padding: 20px 40px;
+    text-align: center;
+    color: #F28D35;
+    font-family: Pangolin;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button4 {
+  border: 2px solid #F28D35;
+}
+
+.button4:hover {
+  color: #F28D35;
+  box-shadow: 3px 3px 20px #F28D35,
+  3px 2px 20px #F28D35;
+}
   
