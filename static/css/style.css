@@ -12,18 +12,10 @@ body {
   }
 
 
+  .cover {
+    object-fit: cover;
+    width: 100vw;
+    height: 350px;
+  }
 
-  /* body {
-    background-image: url("https://res.cloudinary.com/dwobtnj0v/image/upload/v1666345107/static/css/japanese-ocean-background_ztxhv4.jpg");
-    /*The image used */
-    height: 1200px;
-    /* You must set a specified height */
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    /* Center the image */
-    background-repeat: no-repeat;
-    /* Do not repeat the image */
-    background-size: cover;
-    /* Resize the background image to cover the entire container */
-  } */
+  
