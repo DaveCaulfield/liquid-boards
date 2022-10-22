@@ -102,7 +102,7 @@ h2 {
 
 .text-black {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #E1CDC6 !important;
+  color: silver !important;
 }
 
 .border-black {
@@ -111,6 +111,12 @@ h2 {
 
 .bg-black {
   background: #000 !important;
+}
+
+.navbar-toggler-icon {
+
+  color: silver !important;
+
 }
 
 
