@@ -1,5 +1,6 @@
 body {
     background-color: black;
+   
   }
   
   .shop-name {
@@ -12,15 +13,15 @@ body {
   }
 
 
-  .cover {
+  .waves {
     object-fit: cover;
     width: 100vw;
-    height: 30vh;
+    height: 20vh;
   }
 
-  .sunset{
+  .sunset {
     object-fit: cover;
-    width: 60vw;
+    width: 100%;
     height: 60vh;
   }
 
@@ -37,18 +38,23 @@ body {
     padding: 20px 40px;
     text-align: center;
     color: #F28D35;
-    font-family: Pangolin;
+    font-family: logo-font;
     font-weight: bold;
     cursor: pointer;
 }
 
-.button4 {
-  border: 2px solid #F28D35;
+.button4:hover {
+  border: 2px solid silver;
+  color: silver;
+  box-shadow: none;
+
+  
 }
 
-.button4:hover {
+.button4 {
   color: #F28D35;
   box-shadow: 3px 3px 20px #F28D35,
   3px 2px 20px #F28D35;
+  border: 2px solid #F28D35;
 }
   
