@@ -1,17 +1,14 @@
 body {
-    background-color: black;
-   
+    background-color: black; 
   }
   
   .shop-name {
     color: #F28D35;
-    /* color: #A8BFBB; */
-  }
-  h2 {
-    color: #A8BFBB;
-  
   }
 
+  h2 {
+    color: #A8BFBB;
+  }
 
   .waves {
     object-fit: cover;
@@ -25,7 +22,9 @@ body {
     height: 60vh;
   }
 
-
+.tagline {
+  color: #F28D35;
+}
 
   button {
     background: black;
@@ -38,7 +37,7 @@ body {
     padding: 20px 40px;
     text-align: center;
     color: #F28D35;
-    font-family: logo-font;
+    font-family: arial;
     font-weight: bold;
     cursor: pointer;
 }
