@@ -4,15 +4,16 @@ html {
 }
   
   body {
-    /* background: url("https://res.cloudinary.com/dwobtnj0v/image/upload/v1666356779/static/css/sv186063-image-kwynd2ny_cyyu6y.jpg") no-repeat;
-    background-size: cover; */
-  background-color: black; 
+  /* background-color: #FEFCF5;  */
+  background-color: #F2F2F2;
   height:calc(100vh - 164px);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .shop-name {
-  color: #F28D35;
+  /* color: #F28D35; */
+  /* color: #BF6430; */
+  color: #D96B2B;
   font-family: lato;
 }
 
@@ -33,10 +34,10 @@ h2 {
 }
 
 .shop-button {
-  color: #F28D35;
-  box-shadow: 3px 3px 20px #F28D35,
-    3px 2px 20px #F28D35;
-  border: 2px solid #F28D35;
+  color: #D96B2B;
+  box-shadow: 3px 3px 20px #D96B2B,
+    3px 2px 20px #D96B2B;
+  border: 2px solid #D96B2B;
   background: black;
   box-sizing: border-box;
   border-radius: 0.6rem;
@@ -51,7 +52,7 @@ h2 {
 }
 
 .shop-button:hover {
-  border: 2px solid #F28D35;
+  border: 2px solid #D96B2B;
   box-shadow: none;
   background-color: #222;
 }
@@ -141,6 +142,16 @@ h2 {
   color: #F28D35;
 }
 
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: #F2F2F2;
+	z-index: -1;
+}
 
 /* -------------------------------- Media Queries */
 
