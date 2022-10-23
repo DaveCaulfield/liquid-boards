@@ -100,10 +100,16 @@ h2 {
   color: #E1CDC6;
 }
 
-.text-black {
+.text-silver {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: silver !important;
 }
+
+.nav-link:hover {
+  color: #F28D35 !important;
+
+}
+
 
 .border-black {
   border: 1px solid black !important;
@@ -113,6 +119,8 @@ h2 {
   background: #000 !important;
 }
 
+
+
 .navbar-toggler-icon {
 
   color: silver !important;
@@ -120,6 +128,14 @@ h2 {
 }
 
 
+#clothing-link:hover {
+  color: #F28D35;
+}
+
+.nav-item dropdown:hover,
+.nav-link:hover {
+  color: #F28D35;
+}
 
 
 /* -------------------------------- Media Queries */
