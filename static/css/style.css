@@ -42,7 +42,7 @@ h2 {
   border-radius: 0.6rem;
   align-self: center;
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 20px;
   padding: 20px 40px;
   text-align: center;
@@ -53,6 +53,7 @@ h2 {
 .shop-button:hover {
   border: 2px solid #F28D35;
   box-shadow: none;
+  background-color: #222;
 }
 
 
@@ -103,6 +104,9 @@ h2 {
 .text-silver {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: silver !important;
+}
+.text-sunset {
+  color: #F28D35;
 }
 
 .nav-link:hover {
