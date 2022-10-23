@@ -4,8 +4,8 @@ html {
 }
   
   body {
-  /* background-color: #FEFCF5;  */
-  background-color: #F2F2F2;
+  background-color: black; 
+  /* background-color: #F2F2F2; */
   height:calc(100vh - 164px);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -173,6 +173,7 @@ h2 {
   }
 
   .header-container {
-      padding-top: 164px;
+      padding-top: 120px;
+      
   }
 }
