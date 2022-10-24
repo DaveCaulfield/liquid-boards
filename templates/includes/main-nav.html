@@ -20,7 +20,14 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font nav-link text-silver mr-5 py-1" href="#" id="blog-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a> 
+            <a class="logo-font nav-link text-silver mr-5 py-1" href="{% url 'products' %}" id="boards-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All product
+            </a>
+            <div class="dropdown-menu border-0 bg-black " aria-labelledby="boards-link">
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-silver">By Price</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-silver">By Category</a>
+                <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item text-silver">By Brand</a>
+            </div>
         </li>
     </ul>
 </div>
