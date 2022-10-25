@@ -13,7 +13,7 @@ html {
 .shop-name {
   /* color: #F28D35; */
   /* color: #BF6430; */
-  color: #D96B2B;
+  color: #F2913D;
   font-family: lato;
 }
 
@@ -34,10 +34,10 @@ h2 {
 }
 
 .shop-button {
-  color: #D96B2B;
-  box-shadow: 3px 3px 20px #D96B2B,
-    3px 2px 20px #D96B2B;
-  border: 2px solid #D96B2B;
+  color: #F2913D;
+  box-shadow: 3px 3px 20px #F2913D,
+    3px 2px 20px#F2913D;
+  border: 2px solid #F2913D;
   background: black;
   box-sizing: border-box;
   border-radius: 0.6rem;
@@ -52,10 +52,15 @@ h2 {
 }
 
 .shop-button:hover {
-  border: 2px solid #D96B2B;
+  border: 2px solid #F2913D;
   box-shadow: none;
   background-color: #222;
   
+}
+
+#delivery-banner h4 {
+  font-size: 1.2rem;
+  /* background-color: #222; */
 }
 
 
@@ -114,11 +119,11 @@ a.category-badge > span.badge:hover {
   color: silver !important;
 }
 .text-sunset {
-  color: #F28D35;
+  color: #F2913D;
 }
 
 .nav-link:hover {
-  color: #F28D35 !important;
+  color: #F2913D !important;
 
 }
 
@@ -141,12 +146,12 @@ a.category-badge > span.badge:hover {
 
 
 #clothing-link:hover {
-  color: #F28D35;
+  color: #F2913D;
 }
 
 .nav-item dropdown:hover,
 .nav-link:hover {
-  color: #F28D35;
+  color: #F2913D;
 }
 
 
