@@ -88,11 +88,11 @@ a.category-badge > span.badge:hover {
 
 .btn-black {
   background: #222;
-  color: silver;
+  color: white;
 }
 
 .btn-outline-black {
-  background: #E1CDC6;
+  /* background: #E1CDC6; */
   color: black !important; /* use important to override link colors for <a> elements */
   border: 1px solid black;
 }
@@ -101,7 +101,7 @@ a.category-badge > span.badge:hover {
 .btn-outline-black:active,
 .btn-outline-black:focus {
   background: black;
-  color: white !important;
+  color: #F2913D !important;
 }
 
 .shop-now-button:hover,
@@ -111,7 +111,7 @@ a.category-badge > span.badge:hover {
 .btn-black:active,
 .btn-black:focus {
   background: #222;
-  color: #E1CDC6;
+  color: #F2913D;
 }
 
 .text-silver {
