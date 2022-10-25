@@ -180,6 +180,13 @@ color: rgb(56, 56, 56);
 }
 
 
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+
 
 
 
