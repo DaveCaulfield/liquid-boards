@@ -79,8 +79,8 @@ form.addEventListener('submit', function(ev) {
                         country: $.trim(form.country.value),
                         state: $.trim(form.county.value),
                     }
-            }
-        },
+                }
+            },
 
         shipping: {
             name: $.trim(form.full_name.value),
@@ -110,7 +110,7 @@ form.addEventListener('submit', function(ev) {
                 $('#submit-button').attr('disabled', false);
             } else {
                 if (result.paymentIntent.status === 'succeeded') {
-                    
+                    form.submit();
                 }
             }
         });
