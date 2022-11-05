@@ -90,12 +90,7 @@ a.category-badge > span.badge:hover {
 
 .logo-font {
 color:black;
-
 }
-
-
-  
-
 
 .btn-black {
   background: #222;
@@ -134,9 +129,7 @@ color:black;
 
 .nav-link:hover {
   color: #F2913D !important;
-
 }
-
 
 .border-black {
   border: 1px solid black !important;
@@ -146,13 +139,10 @@ color:black;
   background: #000 !important;
 }
 
-
-
 .navbar-toggler {
   padding: .6rem .6rem;
   font-size: 1rem;
 }
-
 
 #clothing-link:hover {
   color: #F2913D;
@@ -162,7 +152,6 @@ color:black;
 .nav-link:hover {
   color: #F2913D;
 }
-
 
 .overlay {
 	height: 100%;
@@ -185,9 +174,7 @@ color:black;
 
 .arrow-scroll-up>i:hover{
 color: rgb(56, 56, 56);
-
 }
-
 
 .btt-link,
 .update-link,
@@ -199,7 +186,6 @@ input[name='q']::placeholder {
   color: #aab7c4;
 }
 
-
 .message-container {
   position: fixed;
   top: 72px;
@@ -210,16 +196,46 @@ input[name='q']::placeholder {
 .custom-toast {
   overflow: visible;
 	background: white;
- 
 }
-
-
 
 .bag-notification-wrapper {
   height: 100px;
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+
+
+/* Product Form */
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+  border-radius: 0;
+  border-color: #dc3545;
+ 
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  border-radius: 0;
+}
+
+
 
 
 
