@@ -62,7 +62,7 @@ h2 {
 
 #delivery-banner h4 {
   font-size: 1.2rem;
-  /* background-color: #222; */
+  color: silver;
 }
 
 
@@ -235,6 +235,37 @@ input[name='q']::placeholder {
   border-radius: 0;
 }
 
+
+
+
+.social-networks {
+  max-width: 100vw;
+}
+
+.social-networks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none; 
+}
+
+.social-networks a {
+  color: grey;
+}
+
+.social-networks>li {
+  justify-content: space-around;
+}
+
+.social-networks i {
+  font-size: 190%;
+  padding: 16px;
+  justify-content: space-around;
+}
+
+.social-networks i:hover {
+  color: silver;
+}
 
 
 
