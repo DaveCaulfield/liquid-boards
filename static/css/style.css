@@ -8,6 +8,7 @@ html {
   background-color: black; 
   height:calc(100vh - 164px);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 100px;
 }
 
 .shop-name {
@@ -29,6 +30,11 @@ h2 {
   object-fit: cover;
   width: 100vw;
   height: 20vh;
+}
+
+.input-group {
+  width: 100px;
+  max-width: 85vw;
 }
 
 .shop-button {
@@ -151,6 +157,11 @@ color:black;
 .nav-item dropdown:hover,
 .nav-link:hover {
   color: #F2913D;
+}
+
+
+.search {
+  max-width: 600px;
 }
 
 .overlay {
@@ -300,13 +311,18 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
   .header-container {
-      padding-top: 116px;
+      padding-top: 160px;
   }
 
   body {
-      height: calc(100vh - 116px);
+      height: calc(100vh - 260px);
   }
 }
+
+
+
+
+
 
 
 
