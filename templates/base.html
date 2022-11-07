@@ -19,7 +19,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" >
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
 
@@ -41,7 +41,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    
+
 
     <title>Liquid Boards {% block extra_title %}{% endblock %}</title>
 </head>
@@ -55,66 +55,111 @@
                 </a>
             </div>
 
-            <div class="row bg-black px-0">
-                <nav class="navbar navbar-expand-lg navbar-light w-100">
-                    <button class="navbar-toggler icon" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="col bg-black px-0 ">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <button class="navbar-toggler icon" type="button" data-toggle="collapse" data-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon icon text-silver"></span>
                     </button>
-        
-                    <!-- {% include 'includes/mobile-top-header.html' %} -->
-                    {% include 'includes/main-nav.html' %}
-                </nav>
-            </div>
+
+                    <div class="collapse navbar-collapse" id="main-nav">
+                        <ul class="navbar-nav w-auto mx-auto">
+                            <li class="nav-item dropdown">
+                                <a class="logo-font nav-link text-silver mr-5 py-1" href="#" id="boards-link"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Boards
+                                </a>
+                                <div class="dropdown-menu border-0 bg-black " aria-labelledby="boards-link">
+                                    <a href="{% url 'products' %}?category=skateboard"
+                                        class="dropdown-item text-silver">Skateboards</a>
+                                    <a href="{% url 'products' %}?category=longboard"
+                                        class="dropdown-item text-silver">Longboards</a>
+                                    <a href="{% url 'products' %}?category=surfskate"
+                                        class="dropdown-item text-silver">Surfskates</a>
+                                    <a href="{% url 'products' %}?category=skateboard,longboard,surfskate"
+                                        class="dropdown-item text-silver">All Boards</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="logo-font nav-link text-silver mr-5 py-1"
+                                    href="{% url 'products' %}?category=trucks" id="wheels-trucks"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trucks</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="logo-font nav-link text-silver mr-5 py-1"
+                                    href="{% url 'products' %}?category=wheels"
+                                    class="dropdown-item text-silver">Wheels</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="logo-font nav-link text-silver mr-5 py-1" href="#" id="boards-link"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    All product
+                                </a>
+                                <div class="dropdown-menu border-0 bg-black " aria-labelledby="boards-link">
+                                    <a href="{% url 'products' %}?category=skateboard,longboard,surfskate,trucks,wheels"
+                                        class="dropdown-item text-silver">All Products</a>
+                                    <a href="{% url 'products' %}?sort=price&direction=asc"
+                                        class="dropdown-item text-silver">By Price</a>
+                                    <a href="{% url 'products' %}?sort=category&direction=asc"
+                                        class="dropdown-item text-silver">By Category</a>
+                                    <a href="{% url 'products' %}?sort=brand&direction=asc"
+                                        class="dropdown-item text-silver">By Brand</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
 
 
-
-
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-
-
-                
-                <ul class="list-inline list-unstyled text-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-silver nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0 bg-black" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item text-silver">Product Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item text-silver">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item text-silver">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item text-silver">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item text-silver">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-sunset {% else %}text-silver{% endif %} nav-link"
-                            href="{% url 'view_bag' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    €{{ grand_total|floatformat:2 }}
+                    <ul class="list-inline list-unstyled text-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-silver nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    {% if request.user.is_authenticated %}
+                                    <p class="my-0">{{user.username}}</p>
                                     {% else %}
-                                    €0.00
+                                    <p class="my-0">My Account</p>
                                     {% endif %}
-                                </p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0 bg-black" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="{% url 'add_product' %}" class="dropdown-item text-silver">Product
+                                    Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item text-silver">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item text-silver">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item text-silver">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item text-silver">Login</a>
+                                {% endif %}
                             </div>
-                        </a>
-                    </li>
-                </ul>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-sunset {% else %}text-silver{% endif %} nav-link"
+                                href="{% url 'view_bag' %}">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                        €{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        €0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
             </div>
         </div>
-        
+        </nav>
 
     </header>
 
@@ -122,17 +167,17 @@
     <div class="message-container">
         {% for message in messages %}
         {% with message.level as level %}
-            {% if level == 40 %}
-                {% include 'includes/toasts/toast_error.html' %}
-            {% elif level == 30 %}
-                {% include 'includes/toasts/toast_warning.html' %}
-            {% elif level == 25 %}
-                {% include 'includes/toasts/toast_success.html' %}
-            {% else %}
-                {% include 'includes/toasts/toast_info.html' %}
-            {% endif %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
         {% endwith %}
-    {% endfor %}
+        {% endfor %}
     </div>
     {% endif %}
 
@@ -157,28 +202,28 @@
 <!-- Footer -->
 <footer class="footer mt-auto dark-bg">
     <div class="container ">
-      <div class="social-media"></div>
-      <ul class="social-networks">
-        <li>
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-            aria-label="Visit our Facebook page (opens in new tab)"><i class="fab fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-            aria-label="Visit our Instagram page (opens in new tab)"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/" target="_blank" rel="noopener"
-            aria-label="Visit our Twitter page (opens in new tab)"><i class="fab fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/" target="blank" rel="noopener"
-            aria-label="Visit out Youtube page (opens in new tab)"><i class="fab fa-youtube"></i></a>
-        </li>
-      </ul>
+        <div class="social-media"></div>
+        <ul class="social-networks">
+            <li>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Facebook page (opens in new tab)"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Instagram page (opens in new tab)"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Twitter page (opens in new tab)"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/" target="blank" rel="noopener"
+                    aria-label="Visit out Youtube page (opens in new tab)"><i class="fab fa-youtube"></i></a>
+            </li>
+        </ul>
     </div>
 
-  </footer>
+</footer>
 
 
 </html>
