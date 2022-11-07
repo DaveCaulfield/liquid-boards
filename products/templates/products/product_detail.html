@@ -10,6 +10,9 @@
 {% endblock %}
 
 {% block content %}
+{% load crispy_forms_tags %}
+
+
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
@@ -97,13 +100,13 @@
 </div>
 
 
-<div class="reviews-card col-md-8 offset-md-2 card mb-4  mt-3 ">
+<div class="reviews-card col-md-8 offset-md-2 card mb-1  mt-3 ">
     <div class="card-body ">
 
         <h3 class=" reviews-header text-center text-sunset"> {{ product.brand }} {{ product.name }} Reviews</h3>
         <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
         {% for review in reviews %}
-        <div class=" text-black mt-4 " style="padding: 25px;">
+        <div class=" text-black mt-4 " style="padding: 5px;">
 
             <!-- The body of the comment goes before the | -->
             <p>
@@ -126,7 +129,37 @@
         <!-- Our for loop ends here -->
         {% endfor %}
     </div>
+
+
+    {% if user.is_authenticated %}
+    <div class="card-body ">
+
+        <p class=" text-muted">Leave a review . . </p>
+
+        <form method="post" style="margin-top: 1.3em;">
+            {{ review_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-black mt-4">Submit</button>
+        </form>
+
+
+        <div class="text-center mt-5 mb-3">
+            <a class="review-arrow-up " href="#top">
+                <i class="fa fa-chevron-circle-up"></i>
+            </a>
+        </div>
+
+
+        </div>
+    {% endif %}
+
+
     </div>
+
+    
+
+
+
     
 
 

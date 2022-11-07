@@ -256,6 +256,17 @@ input[name='q']::placeholder {
 }
 
 
+.review-arrow-up {
+  font-size: 1.8rem;
+  color: grey;
+  padding: 10px;
+}
+
+.review-arrow-up>i:hover {
+  color: silver;
+}
+
+
 .social-networks {
   max-width: 100vw;
 }
