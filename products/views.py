@@ -66,9 +66,11 @@ def product_detail(request, product_id):
     """ a View to return individual product details page """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.filter(product=product)
 
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)
