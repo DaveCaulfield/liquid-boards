@@ -52,5 +52,5 @@ class Review(models.Model):
 
     def __str__(self):
         """Magic Method, returns a string description of the object"""
-        return f"Review {self.body} by {self.user}" 
+        return f"Review {self.body} by {self.author}" 
 

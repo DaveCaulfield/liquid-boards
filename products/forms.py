@@ -33,4 +33,3 @@ class ReviewForm(forms.ModelForm):
         fields = ('body',)
 
 
-

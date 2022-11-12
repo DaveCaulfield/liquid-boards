@@ -8,8 +8,10 @@ from django.urls import reverse_lazy
 
 from django.views.generic import FormView
 
-from .models import Product, Category, Review, UserProfile
+from profiles.models import UserProfile
+from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
+
 
 # Create your views here.
 
@@ -99,34 +101,39 @@ def product_detail(request, product_id):
     return render(request, template, context)
 
 
+
+
+
+
 @login_required
-@require_POST
 def add_review(request, product_id):
-
+    """
+    Add a  review
+    """
     product = get_object_or_404(Product, pk=product_id)
+    user = get_object_or_404(UserProfile, user=request.user)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.product = product
+            review.author = UserProfile.objects.get(user__id=request.user.id)
+            review.save()
+            
+            messages.success(request, 'Your review has been \
+                successfully added.')
+            return redirect(reverse('product_detail', kwargs={"product_id": product.id }))
+        else:
+            messages.error(request, 'There is an error. Please try again.')
+    else:
+        form = ReviewForm()
+    template = 'reviews/add_review.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
 
-    form = ReviewForm(request.POST)
-    if form.is_valid():
-        # We're only getting the review text from the frontend. We need to associate
-        # the product and logged-in user ourselves.
-        # Create review object but don't commit to database yet.
-        review = form.save(commit=False)
-        review.product = product
-        review.author = UserProfile.objects.get(user__id=request.user.id)
-        # review.author = UserProfile.objects.get(user__id=request.user.id)
-        review.save()
-
-    return redirect(reverse('product_detail', kwargs={"product_id": product.id }))
-
-
-
-
-
-
-
-
-
-
+    return render(request, template, context)
 
 
 
