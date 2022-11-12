@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.views.decorators.http import require_GET, require_POST
+from django.urls import reverse_lazy
 
 from django.views.generic import FormView
 
@@ -65,28 +66,11 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
-# def product_detail(request, product_id):
-#     """ a View to return individual product details page """
-
-#     product = get_object_or_404(Product, pk=product_id)
-#     reviews = product.reviews.all()
-
-#     context = {
-#         'product': product,
-#         'reviews': reviews,
-#         'review_form': ReviewForm(),
-#     }
-
-#     return render(request, 'products/product_detail.html', context)
-
-
-
-
 def product_detail(request, product_id):
     """ a View to return individual product details page """
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews = product.reviews.filter(product=product)
+    reviews = product.reviews.all()
     
     template = 'products/product_detail.html'
     context = {
@@ -128,16 +112,11 @@ def add_review(request, product_id):
         # Create review object but don't commit to database yet.
         review = form.save(commit=False)
         review.product = product
-
-        review.user = request.user
+        review.author = UserProfile.objects.get(user__id=request.user.id)
+        # review.author = UserProfile.objects.get(user__id=request.user.id)
         review.save()
 
-    return redirect(reverse('product_detail', product_id=product_id))
-
-
-
-
-
+    return redirect(reverse('product_detail', kwargs={"product_id": product.id }))
 
 
 

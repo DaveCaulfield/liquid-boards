@@ -30,7 +30,7 @@ class ReviewAdmin(admin.ModelAdmin):
     """
     list_display = (
         'product',
-        'user',
+        'author',
         'created_on',
     )
 

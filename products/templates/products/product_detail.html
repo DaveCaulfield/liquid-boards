@@ -121,6 +121,12 @@
             <span class=" text-muted ">
 
             </span>
+            {% if request.user.is_superuser %}
+                <small >
+                    <a href="">Edit</a> |
+                    <a class="text-danger" href="">Delete</a>
+                </small>
+                {% endif %}
         </div>
         <!-- Our for loop ends here -->
         {% endfor %}

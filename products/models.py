@@ -38,10 +38,11 @@ class Review(models.Model):
     Review model. Authenticated members can review a product
     """
 
-    user = models.ForeignKey(UserProfile, related_name='reviews', on_delete=models.CASCADE)
+    author = models.ForeignKey(UserProfile, related_name='reviews', on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="reviews")
     body = models.TextField(max_length=500, null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
+    
     
     class Meta:
         """
