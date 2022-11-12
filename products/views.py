@@ -3,10 +3,11 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.views.decorators.http import require_GET, require_POST
 
 from django.views.generic import FormView
 
-from .models import Product, Category, Review
+from .models import Product, Category, Review, UserProfile
 from .forms import ProductForm, ReviewForm
 
 # Create your views here.
@@ -64,19 +65,92 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+# def product_detail(request, product_id):
+#     """ a View to return individual product details page """
+
+#     product = get_object_or_404(Product, pk=product_id)
+#     reviews = product.reviews.all()
+
+#     context = {
+#         'product': product,
+#         'reviews': reviews,
+#         'review_form': ReviewForm(),
+#     }
+
+#     return render(request, 'products/product_detail.html', context)
+
+
+
+
 def product_detail(request, product_id):
     """ a View to return individual product details page """
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.filter(product=product)
-
+    
+    template = 'products/product_detail.html'
     context = {
         'product': product,
         'reviews': reviews,
-        'review_form': ReviewForm(),
     }
 
-    return render(request, 'products/product_detail.html', context)
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                # We're only getting the review text from the frontend. We need to associate
+                # the product and logged-in user ourselves.
+                # Create review object but don't commit to database yet.
+                review = form.save(commit=False)
+                review.product = product
+
+                review.user = request.user
+                review.save()
+
+        else:
+            form = ReviewForm()
+
+        context['form'] = form
+
+    return render(request, template, context)
+
+
+@login_required
+@require_POST
+def add_review(request, product_id):
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    form = ReviewForm(request.POST)
+    if form.is_valid():
+        # We're only getting the review text from the frontend. We need to associate
+        # the product and logged-in user ourselves.
+        # Create review object but don't commit to database yet.
+        review = form.save(commit=False)
+        review.product = product
+
+        review.user = request.user
+        review.save()
+
+    return redirect(reverse('product_detail', product_id=product_id))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @login_required

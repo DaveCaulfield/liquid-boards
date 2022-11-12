@@ -47,7 +47,7 @@ class Review(models.Model):
         """
         Orders reviews by date created - newest first
         """
-        ordering = ['created_on']
+        ordering = ['-created_on']
 
     def __str__(self):
         """Magic Method, returns a string description of the object"""
