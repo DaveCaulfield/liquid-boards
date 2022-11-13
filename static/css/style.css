@@ -265,7 +265,7 @@ input[name='q']::placeholder {
 }
 
 .review-arrow-up>i:hover {
-  color: silver;
+  color: grey;
 }
 
 

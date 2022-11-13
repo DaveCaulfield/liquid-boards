@@ -46,7 +46,8 @@ a:active { text-decoration: none; }
 
 .btn-dark-outline,
 .fa-chevron-circle-left,
-.fa-chevron-circle-right {
+.fa-chevron-circle-right,
+.fa-chevron-circle-up {
   color: silver;
 }
 
@@ -54,6 +55,10 @@ a:active { text-decoration: none; }
 .fa-chevron-circle-left:hover,
 .fa-chevron-circle-right:hover {
   color:#F2913D;
+}
+
+.fa-chevron-circle-up:hover {
+  color:grey;
 }
 
 .card-img-top {
