@@ -20,8 +20,12 @@ a:active { text-decoration: none; }
   color: #595959;
 }
 
-.blog-link:hover,
-.blog-title:hover {
+.card-title {
+  color: black;
+}
+
+
+.card-title:hover {
   color: #F2913D;
 }
 

@@ -27,7 +27,7 @@
                             <div class="card-deck">
                                 <div class="card mb-4">
                                     <div class="card-body">
-                                        
+                                        <a href="#" class="blog-link">
                                         <div class="image-container">
                                             {% if "placeholder" in blog.featured_image.url %}
                                             <img class="card-img-top"
@@ -38,15 +38,17 @@
                                                 alt="image of blog post">
                                             {% endif %}
                                             <div class="image-flash">
-                                                <a href="#" class="blog-link">
-                                                <h2 class="card-title ">{{ blog.title }}</h2>
-                                            </a>
+                                                
+                                                <h2 class="card-title">{{ blog.title }}</h2>
+                                            
 
-                                                <p class="author">by {{ blog.author }}</p>
+                                                <p class="author text-muted">by {{ blog.author }}</p>
                                                 <p class="card-text text-muted h6">Posted on
                                                     {{ blog.created_on | date:"j F Y" }}</p>
                                             </div>
                                         </div>
+                                    </a>
+                                   
 
                                         <hr />
                                         
@@ -59,6 +61,7 @@
                                     </div>
                                 </div>
                             </div>
+                      
                         
                     </div>
                     {% if forloop.counter|divisibleby:3 %}
