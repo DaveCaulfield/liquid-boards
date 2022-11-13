@@ -101,7 +101,7 @@
 <div class="reviews-card col-md-8 offset-md-2 card mb-1  mt-3 ">
     <div class="card-body ">
 
-        <h3 class=" reviews-header text-center text-sunset"> {{ product.brand }} {{ product.name }} Reviews</h3>
+        <h3 class=" reviews-header text-center text-sunset">  {{ product.name }} Reviews</h3>
         <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
         {% for review in reviews %}
         <div class=" text-black mt-4 " style="padding: 5px;">
@@ -123,7 +123,7 @@
             </span>
             {% if request.user.is_superuser %}
                 <small >
-                    <a href="">Edit</a> |
+                    <a href="{% url 'edit_review' review.id %}">Edit</a> |
                     <a class="text-danger" href="">Delete</a>
                 </small>
                 {% endif %}
