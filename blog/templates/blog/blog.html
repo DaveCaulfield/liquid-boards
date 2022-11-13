@@ -12,7 +12,7 @@
     <div class=" col-8 mb-2 mt-3 mb-3 offset-2 text-center">
 
         <h2 class="text-sunset fw-bold  mb-2">
-            Liquid Blogs . . .
+            Liquid Blogs
         </h2>
     </div>
     <div class="container-fluid">
@@ -27,7 +27,7 @@
                             <div class="card-deck">
                                 <div class="card mb-4">
                                     <div class="card-body">
-                                        <a href="#" class="blog-link">
+                                        <a href="{% url 'blog_detail' blog.slug %}" class="blog-link">
                                         <div class="image-container">
                                             {% if "placeholder" in blog.featured_image.url %}
                                             <img class="card-img-top"
@@ -40,6 +40,7 @@
                                             <div class="image-flash">
                                                 
                                                 <h2 class="card-title">{{ blog.title }}</h2>
+                                                <p class="author text-muted"> {{ blog.excerpt }}</p>
                                             
 
                                                 <p class="author text-muted">by {{ blog.author }}</p>
@@ -75,9 +76,9 @@
                 <div class="text-center mb-5">
                     {% if is_paginated %}
                     {% if page_obj.has_previous %}
-                    <a class="btn btn-dark-outline mb-4" href="?page=1">First</a>
-                    <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.previous_page_number }}">
-                        <i class="fa fa-chevron-circle-left text-muted"></i>
+                    <a class="btn btn-dark-outline  mb-4" href="?page=1">First</a>
+                    <a class="btn btn-dark-outline  mb-4" href="?page={{ page_obj.previous_page_number }}">
+                        <i class="fa fa-chevron-circle-left "></i>
 
                     </a>
                     {% endif %}
@@ -92,7 +93,7 @@
 
                     {% if page_obj.has_next %}
                     <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.next_page_number }}">
-                        <i class="fa fa-chevron-circle-right text-muted"></i></a>
+                        <i class="fa fa-chevron-circle-right"></i></a>
                     <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
                     {% endif %}
                     {% endif %}

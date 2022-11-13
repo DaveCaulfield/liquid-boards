@@ -281,7 +281,7 @@ input[name='q']::placeholder {
 }
 
 .social-networks a {
-  color: grey;
+  color: silver;
 }
 
 .social-networks>li {
@@ -295,7 +295,7 @@ input[name='q']::placeholder {
 }
 
 .social-networks i:hover {
-  color: silver;
+  color: grey;
 }
 
 

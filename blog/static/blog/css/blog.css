@@ -25,10 +25,6 @@ a:active { text-decoration: none; }
 }
 
 
-.card-title:hover {
-  color: #F2913D;
-}
-
 .blog-title {
   margin-top: 20%;
   margin-left: 5%;
@@ -45,4 +41,17 @@ a:active { text-decoration: none; }
   color: #E84610;
   background: transparent;
   border: none;
+}
+
+
+.btn-dark-outline,
+.fa-chevron-circle-left,
+.fa-chevron-circle-right {
+  color: silver;
+}
+
+.btn-dark-outline:hover,
+.fa-chevron-circle-left:hover,
+.fa-chevron-circle-right:hover {
+  color:#F2913D;
 }
