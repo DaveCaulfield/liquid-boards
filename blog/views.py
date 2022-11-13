@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.contrib import messages
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Blog
 from .forms import CommentForm
 
@@ -72,3 +74,26 @@ class BlogDetail(View):
                 "comment_form": CommentForm()
             },
         )
+
+
+class BlogLike(View):
+    """
+    Blog like feature
+    """
+
+    def post(self, request, slug, *args, **kwargs):
+        """
+        toggle likes on/off. two options.
+        if user has liked a blog post then remove like.
+        if user has not a blog post the add like.
+        """
+        blog = get_object_or_404(Blog, slug=slug)
+
+        if blog.likes.filter(id=request.user.id).exists():
+            blog.likes.remove(request.user)
+            messages.success(request, 'You removed your Like from this blog post')
+        else:
+            blog.likes.add(request.user)
+            messages.success(request, 'You added a Like to this blog post')
+
+        return HttpResponseRedirect(reverse('blog_detail', args=[slug]))

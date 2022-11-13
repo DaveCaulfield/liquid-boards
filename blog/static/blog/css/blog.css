@@ -31,14 +31,14 @@ a:active { text-decoration: none; }
 }
 
 .btn-like {
-  color: #E84610;
+  color: #F2913D;
   border: none;
   background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-  color: #E84610;
+  color: #F2913D;
   background: transparent;
   border: none;
 }
