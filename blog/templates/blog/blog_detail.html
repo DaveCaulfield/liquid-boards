@@ -30,8 +30,8 @@
                 </div>
                 
                 <h2 class="card-title">{{ blog.title }}</h2>
-                <p>By {{ blog.author }}</p>
-                <p class="card-text text-muted h6">Posted on {{ blog.created_on | date:"j F Y" }}</p>
+                <p class="card-text text-muted">Blog post by {{ blog.author }}</p>
+                <p class="card-text text-muted">Posted on {{ blog.created_on | date:"j F Y" }}</p>
                 <div>
                     {% if blog.author == user%}
 
