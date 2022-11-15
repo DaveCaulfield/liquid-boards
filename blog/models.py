@@ -58,7 +58,7 @@ class Comment(models.Model):
     """
     blog = models.ForeignKey(
         Blog, on_delete=models.CASCADE, related_name="comments")
-    commenter = models.ForeignKey(UserProfile, related_name='commenter', on_delete=models.CASCADE, null=True)
+    commenter = models.ForeignKey(UserProfile, related_name='comments', on_delete=models.CASCADE)
     name = models.CharField(max_length=80)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)

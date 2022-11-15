@@ -21,7 +21,7 @@ class BlogList(generic.ListView):
 
 class BlogDetail(View):
     """
-    display blog post details 
+    display blog post details
     """
 
     def get(self, request, slug, *args, **kwargs):
@@ -42,7 +42,7 @@ class BlogDetail(View):
                 "blog": blog,
                 "comments": comments,
                 "liked": liked,
-                "comment_form": CommentForm()    
+                "comment_form": CommentForm()
             },
         )
 
@@ -63,11 +63,13 @@ class BlogDetail(View):
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.blog = blog
+            user_profile = UserProfile.objects.get(user=request.user)
+            comment.commenter = user_profile
             comment.save()
             messages.success(request, 'Your comment has been added ')
 
             return HttpResponseRedirect(reverse('blog_detail', args=[slug]))
-          
+
         else:
             comment_form = CommentForm()
 
@@ -81,8 +83,6 @@ class BlogDetail(View):
                 "comment_form": CommentForm()
             },
         )
-
-    
 
 
 class BlogLike(View):
@@ -100,7 +100,9 @@ class BlogLike(View):
 
         if blog.likes.filter(id=request.user.id).exists():
             blog.likes.remove(request.user)
-            messages.success(request, 'You removed your Like from this blog post')
+            messages.success(
+                request, 'You removed your Like from this blog post'
+                )
         else:
             blog.likes.add(request.user)
             messages.success(request, 'You added a Like to this blog post')
@@ -113,7 +115,7 @@ def edit_comment(request, comment_id):
     """
     Edit a comment
     """
-    
+
     comment = get_object_or_404(Comment, pk=comment_id)
     if request.method == 'POST':
         form = CommentForm(request.POST, instance=comment)
@@ -139,24 +141,6 @@ def edit_comment(request, comment_id):
     return render(request, template, context)
 
 
-# @login_required
-# def delete_comment(request, comment_id):
-#     """
-#     Delete a blog comment
-#     """
-#     comment = get_object_or_404(Comment, pk=comment_id)
-
-#     if request.user == comment.commenter or request.user.is_superuser:
-#         comment.delete()
-#         messages.info(request, "Comment deleted!")
-#         return redirect(reverse("blog_detail", args=[comment.blog.slug]))
-#     else:
-#         messages.error(
-#             request,
-#             "Only shop owner and comment author can do that.")
-#         return redirect(reverse("blog_detail", args=[comment.blog.slug]))
-
-
 @login_required
 def delete_comment(request, comment_id):
     """
@@ -164,8 +148,16 @@ def delete_comment(request, comment_id):
     """
     comment = get_object_or_404(Comment, pk=comment_id)
 
+    # python debugger
+    # more info here: https://docs.python.org/3/library/pdb.html
+    # import pdb; pdb.set_trace()
 
-    comment.delete()
-    messages.info(request, "Comment deleted!")
-    return redirect(reverse("blog_detail", args=[comment.blog.slug]))
-   
+    if request.user == comment.commenter.user or request.user.is_superuser:
+        comment.delete()
+        messages.success(request, "Comment deleted!")
+        return redirect(reverse("blog_detail", args=[comment.blog.slug]))
+    else:
+        messages.error(
+            request,
+            "Only shop owner and comment author can do that.")
+        return redirect(reverse("blog_detail", args=[comment.blog.slug]))
