@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.db.models import Q
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Blog, Comment
+from profiles.models import UserProfile, User
 from .forms import CommentForm
 
 
@@ -135,3 +137,35 @@ def edit_comment(request, comment_id):
     }
 
     return render(request, template, context)
+
+
+# @login_required
+# def delete_comment(request, comment_id):
+#     """
+#     Delete a blog comment
+#     """
+#     comment = get_object_or_404(Comment, pk=comment_id)
+
+#     if request.user == comment.commenter or request.user.is_superuser:
+#         comment.delete()
+#         messages.info(request, "Comment deleted!")
+#         return redirect(reverse("blog_detail", args=[comment.blog.slug]))
+#     else:
+#         messages.error(
+#             request,
+#             "Only shop owner and comment author can do that.")
+#         return redirect(reverse("blog_detail", args=[comment.blog.slug]))
+
+
+@login_required
+def delete_comment(request, comment_id):
+    """
+    Delete a blog comment
+    """
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+
+    comment.delete()
+    messages.info(request, "Comment deleted!")
+    return redirect(reverse("blog_detail", args=[comment.blog.slug]))
+   

@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from profiles.models import UserProfile
 from cloudinary.models import CloudinaryField
 from django.template.defaultfilters import slugify
 
@@ -14,7 +15,7 @@ class Blog(models.Model):
         max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="recipes")
+        User, on_delete=models.CASCADE, related_name="blog")
     created_on = models.DateTimeField(auto_now=True)
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField('image', default='placeholder')
@@ -53,15 +54,16 @@ class Blog(models.Model):
 
 class Comment(models.Model):
     """
-    Comments model. Authenticated memebers can comment on a recipe
+    Comments model. Authenticated members can comment on a blog
     """
     blog = models.ForeignKey(
         Blog, on_delete=models.CASCADE, related_name="comments")
+    commenter = models.ForeignKey(UserProfile, related_name='commenter', on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=80)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     
-    class Meta:
+    class Meta:  
         """
         Orders blog posts by date created - oldest first
         """

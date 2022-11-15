@@ -136,9 +136,9 @@
     
                         <small >
                             <a href="{% url 'edit_comment' comment.id %}">Edit</a> |
-                            <a class="text-danger" href="">Delete</a>
+                            <a class="text-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
                         </small>
-                        {% endif %}
+                        {% endif %}  
                         {% endif %}
 
                 </div>
