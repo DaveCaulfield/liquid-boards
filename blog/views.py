@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Blog
+from .models import Blog, Comment
 from .forms import CommentForm
 
 
@@ -61,6 +62,10 @@ class BlogDetail(View):
             comment = comment_form.save(commit=False)
             comment.blog = blog
             comment.save()
+            messages.success(request, 'Your comment has been added ')
+
+            return HttpResponseRedirect(reverse('blog_detail', args=[slug]))
+          
         else:
             comment_form = CommentForm()
 
@@ -74,6 +79,8 @@ class BlogDetail(View):
                 "comment_form": CommentForm()
             },
         )
+
+    
 
 
 class BlogLike(View):
@@ -97,3 +104,34 @@ class BlogLike(View):
             messages.success(request, 'You added a Like to this blog post')
 
         return HttpResponseRedirect(reverse('blog_detail', args=[slug]))
+
+
+@login_required
+def edit_comment(request, comment_id):
+    """
+    Edit a comment
+    """
+    
+    comment = get_object_or_404(Comment, pk=comment_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your comment has been \
+            successfully updated.')
+            return redirect(
+                reverse('blog_detail', args=(comment.blog.slug,)))
+
+        else:
+            messages.error(request, 'Please try again.')
+    else:
+        form = CommentForm(instance=comment)
+
+    template = "blog/edit_comment.html"
+    context = {
+        "form": form,
+        "comment": comment,
+        "blog": comment.blog,
+    }
+
+    return render(request, template, context)
