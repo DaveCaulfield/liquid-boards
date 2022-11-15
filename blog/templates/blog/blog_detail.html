@@ -32,13 +32,13 @@
                 <h2 class="card-title">{{ blog.title }}</h2>
                 <p class="card-text text-muted">Blog post by {{ blog.author }}</p>
                 <p class="card-text text-muted">Posted on {{ blog.created_on | date:"j F Y" }}</p>
-                <div>
+                <!-- <div>
                     {% if blog.author == user%}
 
                     <a class="btn btn-secondary mt-3 mb-3" href="">Edit</a>
                     <a class="btn btn-danger mt-3 mb-3" href="">Delete</a>
 
-                    {% endif %}
+                    {% endif %} -->
                 </div>
 
 
@@ -53,16 +53,16 @@
                                 {% if liked %}
                                 
                                 <button type="submit" name="blog_id" value="{{blog.slug}}" class="btn-like"><i
-                                        class="fas fa-thumbs-up text-sunset"></i></button>
+                                        class="fas fa-thumbs-up text-sunset ml-3"></i></button>
                                 {% else %}
                                 
                                 <button type="submit" name="blog_id" value="{{blog.slug}}" class="btn-like"><i
-                                        class="far fa-thumbs-up text-sunset"></i></button>
+                                        class="far fa-thumbs-up text-sunset ml-3"></i></button>
                                 {% endif %}
                             </strong>
                         </form>
                         {% else %}
-                        <span class="text-secondary"><i class="far fa-thumbs-up text-sunset"></i></span>
+                        <span class="text-secondary"><i class="far fa-thumbs-up text-sunset ml-3"></i></span>
                         <span class="text-secondary">{{ blog.number_of_likes }}</span>
 
                         {% endif %}
@@ -76,18 +76,13 @@
                             {{ total_comments }}</strong>
                         {% endwith %}
                     </div>
+                    
                 </div>
 
-
-               
-
-
-
                 <p class="card-text">
+                    <hr class="text-grey w-75 mx-auto pb-4">
                     {{ blog.content | safe }}
                 </p>
-              
-                <hr class="mt-5">
 
 
                 <div class="row ">

@@ -40,21 +40,23 @@
                                             <div class="image-flash">
                                                 
                                                 <h2 class="card-title">{{ blog.title }}</h2>
-                                                <p class="author text-muted"> {{ blog.excerpt }}</p>
-                                            
+                                                                                        
 
                                                 <p class="author text-muted">by {{ blog.author }}</p>
                                                 <p class="card-text text-muted h6">Posted on
                                                     {{ blog.created_on | date:"j F Y" }}</p>
+                                                    <hr class="text-grey w-75 mx-auto pb-3">  
+
+                                                    <p class="author text-muted"> {{ blog.excerpt }}</p>
+                                                    
+                                                    
                                             </div>
                                         </div>
                                     </a>
                                    
-
-                                        <hr />
-                                        
-
+                           
                                         <div>
+                                           
                                             <i class="fas fa-thumbs-up text-sunset "></i>
                                             {{ blog.number_of_likes }}
                                         </div>
