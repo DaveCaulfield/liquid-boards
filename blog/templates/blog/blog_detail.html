@@ -20,11 +20,11 @@
                  <!-- Display blog image -->
                  <div class="img_detail mt-3 mb-3">
                     {% if "placeholder" in blog.featured_image.url %}
-                    <img class="card-img-top "
+                    <img class="card-img-top-post "
                         src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1666617492/static/css/sunset-skater2_ygtk3o.jpg"
                         alt="default image for blog">
                     {% else %}
-                    <img class="card-img-top" src=" {{ blog.featured_image.url }}" alt="image of blog">
+                    <img class="card-img-top-post" src=" {{ blog.featured_image.url }}" alt="image of blog">
                     {% endif %}
 
                 </div>
