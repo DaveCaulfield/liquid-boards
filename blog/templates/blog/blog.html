@@ -20,14 +20,14 @@
         <div class="row">
 
             <!-- Display blogs -->
-            <div class="col-10 offset-1 mt-3">
+            <div class="col-xl-10 offset-xl-1 mt-3">
                 <div class="row">
                     {% for blog in blog_list %}
                     <div class=" col-xl-4">
                         
                             <div class="card-deck">
-                                <div class="card mb-4 bg-black">
-                                    <div class="card-body">
+                                <div class="card mb-4">
+                                    <div class="card-body blog-card">
                                         <a href="{% url 'blog_detail' blog.slug %}" class="blog-link">
                                         <div class="image-container">
                                             {% if "placeholder" in blog.featured_image.url %}
@@ -41,16 +41,17 @@
                                             <div class="image-flash">
                                                 
                                                 <h4 class="post-title pt-2 ">{{ blog.title }}</h4>
-                                                <p class="card-text text-muted">by {{ blog.author }}, 
+                                            </a>
+                                                <p class="card-text text-muted pb-1">by {{ blog.author }}, 
                                                      {{ blog.created_on | date:"j F Y" }}</p>
-                                                    <p class="card-text pb-3"> {{ blog.excerpt }}</p>                                              
+                                                     <hr class="text-grey w-75 mx-auto pb-3">
+                                                    <p class="text-muted "> {{ blog.excerpt }}</p>                                              
                                             </div>
                                         </div>
-                                    </a>
+                                    
                                    
                            
                                         <div>
-                                           
                                             <i class="fas fa-thumbs-up text-sunset "></i>
                                             <span class="text-silver ">{{ blog.number_of_likes }}</span>
                                         </div>
