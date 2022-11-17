@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- blog section -->
+<section id="blog-posts">
+    <div class=" col-8 mb-2 mt-3 mb-3 offset-2 text-center">
+
+        <!-- <h2 class="text-sunset fw-bold  mb-2">
+            Liquid Stores
+        </h2> -->
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Display blogs -->
+            <!-- <div class="overlay"></div> -->
+            <div class="col-10 offset-1 mt-3">
+                <div class="row">
+                    {% for store in store_list %}
+                    <div class=" -10 offset-1">
+                        
+                            <div class="card-deck">
+                                <div class="card mb-4">
+                                    <div class="card-body bg-black">
+                                        <a href="" class="blog-link">
+                                        <div class="image-container">
+                                            {% if "placeholder" in store.featured_image.url %}
+                                            <img class="card-img-top"
+                                                src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1666617492/static/css/sunset-skater2_ygtk3o.jpg"
+                                                alt="default image for blog">
+                                            {% else %}
+                                            <img class="card-img-top" src=" {{ store.featured_image.url }}"
+                                                alt="image of blog post">
+                                            {% endif %}
+                                            <div class="image-flash">
+                                                
+                                                <h2 class="card-title">{{ store.name }}</h2>
+                                                                                        
+                                                    
+                                                    
+                                            </div>
+                                        </div>
+                                    </a>
+                                   
+                           
+                                      
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                      
+                        
+                    </div>
+                    {% if forloop.counter|divisibleby:3 %}
+                </div>
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!-- Pagination menu -->
+                <div class="text-center mb-5">
+                    {% if is_paginated %}
+                    {% if page_obj.has_previous %}
+                    <a class="btn btn-dark-outline  mb-4" href="?page=1">First</a>
+                    <a class="btn btn-dark-outline  mb-4" href="?page={{ page_obj.previous_page_number }}">
+                        <i class="fa fa-chevron-circle-left "></i>
+
+                    </a>
+                    {% endif %}
+
+                    {% for num in page_obj.paginator.page_range %}
+                    {% if page_obj.number == num %}
+                    <a class=" btn btn-secondary mb-4" href="?page={{ num }}">{{ num }}</a>
+                    {% elif num > page_obj.number|add:'-2' and num < page_obj.number|add:'2' %}
+                    <a class="btn btn-dark-outline mb-4" href="?page={{ num }}">{{ num }}</a>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+                    <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.next_page_number }}">
+                        <i class="fa fa-chevron-circle-right"></i></a>
+                    <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                    {% endif %}
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+{% endblock content%}
