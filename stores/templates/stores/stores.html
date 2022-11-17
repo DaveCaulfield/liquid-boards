@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'stores/css/stores.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -19,28 +19,37 @@
         <div class="row">
 
             <!-- Display blogs -->
-            <!-- <div class="overlay"></div> -->
-            <div class="col-10 offset-1 mt-3">
+            <div class="overlay"></div>
+            <div class="col-10 offset-1  mt-3">
                 <div class="row">
                     {% for store in store_list %}
-                    <div class=" -10 offset-1">
+                    <div class=" col-xl-4">
                         
                             <div class="card-deck">
                                 <div class="card mb-4">
                                     <div class="card-body bg-black">
                                         <a href="" class="blog-link">
                                         <div class="image-container">
-                                            {% if "placeholder" in store.featured_image.url %}
+                                            {% if "logo_placeholder" in store.logo_image.url %}
                                             <img class="card-img-top"
                                                 src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1666617492/static/css/sunset-skater2_ygtk3o.jpg"
-                                                alt="default image for blog">
+                                                alt="default logo for store">
                                             {% else %}
-                                            <img class="card-img-top" src=" {{ store.featured_image.url }}"
-                                                alt="image of blog post">
+                                            <img class="card-img-top" src=" {{ store.logo_image.url }}"
+                                                alt="image logo for store">
+                                            {% endif %}
+
+                                            {% if "placeholder" in store.featured_image.url %}
+                                            <img class="card-img-bottom pb-1"
+                                                src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1666617492/static/css/sunset-skater2_ygtk3o.jpg"
+                                                alt="default feature image for store">
+                                            {% else %}
+                                            <img class="card-img-bottom pb-1" src=" {{ store.featured_image.url }}"
+                                                alt="feature image for store">
                                             {% endif %}
                                             <div class="image-flash">
                                                 
-                                                <h2 class="card-title">{{ store.name }}</h2>
+                                                
                                                                                         
                                                     
                                                     

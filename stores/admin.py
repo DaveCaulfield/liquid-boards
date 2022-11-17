@@ -15,6 +15,8 @@ class StoreAdmin(admin.ModelAdmin):
     fields = ('name',
               'location',
               'owner',
+              'logo_image',
+              'logo_url',
               'featured_image',
               'image_url',
               )

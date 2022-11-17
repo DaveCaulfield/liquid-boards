@@ -8,13 +8,14 @@
 {% block content %}
 
 <!-- blog section -->
+<div class="overlay"></div>
 <section id="blog-posts">
-    <div class=" col-8 mb-2 mt-3 mb-3 offset-2 text-center">
+    <!-- <div class=" col-8 mb-2 mt-3 mb-3 offset-2 text-center">
 
         <h2 class="text-sunset fw-bold  mb-2">
             Liquid Blogs
         </h2>
-    </div>
+    </div> -->
     <div class="container-fluid">
         <div class="row">
 
@@ -25,7 +26,7 @@
                     <div class=" col-xl-4">
                         
                             <div class="card-deck">
-                                <div class="card mb-4">
+                                <div class="card mb-4 bg-black">
                                     <div class="card-body">
                                         <a href="{% url 'blog_detail' blog.slug %}" class="blog-link">
                                         <div class="image-container">
@@ -39,17 +40,10 @@
                                             {% endif %}
                                             <div class="image-flash">
                                                 
-                                                <h2 class="card-title">{{ blog.title }}</h2>
-                                                                                        
-
-                                                <p class="author text-muted">by {{ blog.author }}</p>
-                                                <p class="card-text text-muted h6">Posted on
-                                                    {{ blog.created_on | date:"j F Y" }}</p>
-                                                    <hr class="text-grey w-75 mx-auto pb-3">  
-
-                                                    <p class="author text-muted"> {{ blog.excerpt }}</p>
-                                                    
-                                                    
+                                                <h4 class="post-title pt-2 ">{{ blog.title }}</h4>
+                                                <p class="card-text text-muted">by {{ blog.author }}, 
+                                                     {{ blog.created_on | date:"j F Y" }}</p>
+                                                    <p class="card-text pb-3"> {{ blog.excerpt }}</p>                                              
                                             </div>
                                         </div>
                                     </a>
@@ -58,7 +52,7 @@
                                         <div>
                                            
                                             <i class="fas fa-thumbs-up text-sunset "></i>
-                                            {{ blog.number_of_likes }}
+                                            <span class="text-silver ">{{ blog.number_of_likes }}</span>
                                         </div>
 
 

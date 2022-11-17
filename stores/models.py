@@ -10,6 +10,8 @@ class Store(models.Model):
     location = models.CharField(max_length=200,null=False, blank=False)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     featured_image = CloudinaryField('image', default='placeholder')
+    logo_url = models.URLField(max_length=1024, null=True, blank=True)
+    logo_image = CloudinaryField('logo', default='logo_placeholder')
     owner = models.CharField(max_length=200, null=False, blank=False)
     
 
