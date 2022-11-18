@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Store, StoreAddress
+from .models import Store, StoreAddress, Staff
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -46,3 +46,22 @@ class StoreAddressAdmin(admin.ModelAdmin):
 
     list_filter = ('country', 'store')
     search_fields = ['name', 'email', 'phone_number']
+
+
+@admin.register(Staff)
+class StaffAdmin(admin.ModelAdmin):
+    """
+    backend staff admin area
+    """
+    list_display = (
+                    'staff_number', 
+                    'store',
+                    'first_name',
+                    'surname',
+                    'job_title',
+                    'start_date',
+                    'staff_number', 
+                    )
+
+    list_filter = ('surname', 'store', 'staff_number')
+    search_fields = ['surname', 'email', 'phone_number', 'staff_number']
