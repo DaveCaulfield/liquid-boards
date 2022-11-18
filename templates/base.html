@@ -117,9 +117,22 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="logo-font nav-link text-silver mr-5 py-1"
-                                    href="{% url 'stores' %}?"
-                                    class="dropdown-item text-silver">Stores</a>
+                                    <a class="logo-font nav-link text-silver mr-5 py-1" href="#" id="boards-link"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Local Shops
+                                </a>
+                                <div class="dropdown-menu border-0 bg-black " aria-labelledby="boards-link">
+                                    <a href="{% url 'stores'  %}"
+                                        class="dropdown-item text-silver">All Shops</a>
+                                    <a href="{% url 'store_detail' 2 %}"
+                                        class="dropdown-item text-silver">Dublin</a>
+                                    <a href="{% url 'store_detail' 4 %}"
+                                        class="dropdown-item text-silver">New York</a>
+                                    <a href="{% url 'store_detail' 3 %}"
+                                        class="dropdown-item text-silver">New Zealand</a>
+                                    
+                                </div>
+
                             </li>
 
                         </ul>
