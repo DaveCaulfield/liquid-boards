@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+
+
+<!-- Display Store Details -->
+<!-- <div class="overlay"></div> -->
+<div class="container ">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1 card mb-4 mt-3 left  top">
+            <div class="card-body mt-2">
+
+                 <!-- Display store image -->
+                 <div class="img_detail mt-3 mb-3">
+                    {% if "placeholder" in stores.featured_image.url %}
+                    <img class="card-img-top-post "
+                        src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1666617492/static/css/sunset-skater2_ygtk3o.jpg"
+                        alt="default image for store">
+                    {% else %}
+                    <img class="card-img-top-post" src=" {{ store.featured_image.url }}" alt="image of store">
+                    {% endif %}
+
+                </div>
+                
+                <h2 class="card-title">{{ store.name }}</h2>
+                <p class="card-text text-muted"> {{ address.street_address1 }}</p>
+                <p class="card-text text-muted"> {{ address.street_address2 }}</p>
+                <p class="card-text text-muted"> {{ address.town_or_city }}</p>
+                <p class="card-text text-muted"> {{ address.county }}</p>
+                <p class="card-text text-muted"> {{ address.country }}</p>
+                <p class="card-text text-muted"> {{ address.postcode }}</p>
+
+                <p class="card-text text-muted"> {{ address.email }}</p>
+                <p class="card-text text-muted"> {{ address.phone_number }}</p>
+
+
+            
+                </div>
+
+
+           
+
+               
+
+
+               
+            </div>
+        </div>
+
+        <!-- <div class="row"> -->
+        <div class="col-lg-10 offset-lg-1 card mb-4  mt-3 ">
+            <div class="card-body">
+
+                <h3 class="text-center text-muted mt-3 mb-5"> Our Team</h3>
+                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                {% for address in addresses %}
+                <div class="comments text-muted mt-4 " style="padding: 25px;">
+
+                    <!-- The body of the comment goes before the | -->
+                    <p>
+                        <strong>
+                            {{ address | linebreaks }}
+                        </strong>
+                    </p>
+
+                    
+                    <span class=" text-muted ">
+                    </span>
+
+                   
+
+                </div>
+                
+                <!-- Our for loop ends here -->
+                {% endfor %}
+            </div>
+
+
+            <!-- <div class="card-body "> -->
+
+            {% if user.is_authenticated %}
+            <div class="card-body ">
+
+              
+
+               
+
+
+                <div class="text-center mt-5 mb-3">
+                    <a class="arrow-up " href="#top">
+                        <i class="fa fa-chevron-circle-up"></i>
+                    </a>
+                </div>
+
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

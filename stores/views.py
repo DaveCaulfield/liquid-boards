@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views import generic, View
-from .models import Store
+from .models import Store, StoreAddress
 
 
 class StoreList(generic.ListView):
@@ -11,3 +11,18 @@ class StoreList(generic.ListView):
     queryset = Store.objects.all()
     template_name = 'stores/stores.html'
     paginate_by = 3
+
+
+def store_detail(request, store_id):
+    """ a View to return individual store detail page """
+
+    queryset = Store.objects
+    store = get_object_or_404(Store, pk=store_id)
+    address = get_object_or_404(StoreAddress, pk=store)
+     
+    template = 'stores/store_detail.html'
+    context = {
+        'store': store,
+        'address': address,    
+    }
+    return render(request, template, context)

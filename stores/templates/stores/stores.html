@@ -28,7 +28,7 @@
                             <div class="card-deck">
                                 <div class="card mb-4">
                                     <div class="card-body bg-black">
-                                        <a href="" class="blog-link">
+                                        <a href="{% url 'store_detail' store.id %}" class="blog-link">
                                         <div class="image-container">
                                             {% if "logo_placeholder" in store.logo_image.url %}
                                             <img class="card-img-top"

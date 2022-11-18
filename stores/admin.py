@@ -14,6 +14,7 @@ class StoreAdmin(admin.ModelAdmin):
 
     fields = ('name',
               'location',
+              'about',
               'owner',
               'logo_image',
               'logo_url',
@@ -33,14 +34,14 @@ class StoreAddressAdmin(admin.ModelAdmin):
     """
     list_display = (
                     'store',
+                    'phone_number',
+                    'email',
                     'street_address1',
                     'street_address2',
                     'town_or_city',
                     'county',
                     'country',
-                    'postcode',
-                    'email',
-                    'phone_number'
+                    'postcode',  
                     )
 
     list_filter = ('country', 'store')
