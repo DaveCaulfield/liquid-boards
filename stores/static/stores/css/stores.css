@@ -75,6 +75,23 @@ a:active { text-decoration: none; }
 
 
 
+/* 
+store details page */
+
+.card-logo_store_details{
+  width: 100%;
+  height: 20vh;
+  object-fit: contain;
+}
+
+.card-staff_img_detail {
+  height: 200px;
+  width: 200px;
+}
+
+
+
+
 /* small screen */
 @media (max-width:1199px) {
   .header-container {
