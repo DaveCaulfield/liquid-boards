@@ -62,6 +62,26 @@ class Staff(models.Model):
         """
         Magic Method, returns a string description of the object
         """
-        return f"Staff member - {self.first_name} {self.surname}"
+        return f" {self.first_name} {self.surname}"
 
 
+class StaffAddress(models.Model):
+    """
+    Model for a Staff Contact details
+    """
+    staff = models.OneToOneField(
+        Staff, on_delete=models.CASCADE, primary_key=True)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    street_address1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    town_or_city = models.CharField(max_length=40, null=False, blank=False)    
+    county = models.CharField(max_length=80, null=True, blank=True)
+    country = models.CharField(max_length=80, null=False, blank=False)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+
+    def __str__(self):
+        """
+        Magic Method, returns a string description of the object
+        """
+        return f"Staff address - {self.staff}"

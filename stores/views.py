@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views import generic, View
-from .models import Store, StoreAddress
+from .models import Store, StoreAddress, Staff, StaffAddress
 
 
 class StoreList(generic.ListView):
@@ -19,10 +19,15 @@ def store_detail(request, store_id):
     queryset = Store.objects
     store = get_object_or_404(Store, pk=store_id)
     address = get_object_or_404(StoreAddress, pk=store)
-     
+    staff = store.staff.all()
+  
     template = 'stores/store_detail.html'
     context = {
         'store': store,
-        'address': address,    
+        'address': address,  
+        'staff': staff,  
     }
+
     return render(request, template, context)
+
+    

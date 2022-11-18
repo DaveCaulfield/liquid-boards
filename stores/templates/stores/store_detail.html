@@ -47,54 +47,69 @@
             </div>
         </div>
 
-        <!-- <div class="row"> -->
-        <div class="col-lg-10 offset-lg-1 card mb-4  mt-3 ">
-            <div class="card-body">
 
-                <h3 class="text-center text-muted mt-3 mb-5"> Our Team</h3>
+
+
+
+
+
+        <div class="reviews-card col-md-8 offset-md-2 card mb-1  mt-3 ">
+            <div class="card-body ">
+        
+                <h3 class=" reviews-header text-center text-black">  {{ store.name }} Staff</h3>
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
-                {% for address in addresses %}
-                <div class="comments text-muted mt-4 " style="padding: 25px;">
-
+                {% for staff in staff %}
+                <div class=" text-black mt-4 " style="padding: 5px;">
+        
                     <!-- The body of the comment goes before the | -->
                     <p>
-                        <strong>
-                            {{ address | linebreaks }}
+                        <strong> 
+                            {{ staff.first_name}} {{ staff.surname  }}
+                            {{ staff.job_title| linebreaks }}
                         </strong>
                     </p>
-
                     
+                    <p>
+                        <span class=" text-muted ">
+                            {{ staff.bio }} {{ review.created_on | date:" @ H:i j F Y " }}
+                        </span>
+                    </p>
                     <span class=" text-muted ">
+        
                     </span>
-
-                   
-
+                    
+                    
                 </div>
-                
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
-
-
-            <!-- <div class="card-body "> -->
-
-            {% if user.is_authenticated %}
-            <div class="card-body ">
-
-              
-
-               
-
-
+        
+        
+            
+        
                 <div class="text-center mt-5 mb-3">
-                    <a class="arrow-up " href="#top">
+                    <a class="review-arrow-up " href="#top">
                         <i class="fa fa-chevron-circle-up"></i>
                     </a>
                 </div>
-
             </div>
-            {% endif %}
+            
+        
         </div>
+
+
+
+
+
+
+
+
+
+       
+    
+
+
+        
     </div>
 </div>
 
