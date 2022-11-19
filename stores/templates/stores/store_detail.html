@@ -105,7 +105,9 @@
             <div class="card-body mt-2">
 
                 <!-- Display Store address -->
-                <div class="card-text text-muted text-left font-weight-bold col-lg-4 offset-lg-4">
+                <div class="card-text text-muted text-center col-lg-4 offset-lg-4">
+
+                    <p class="pt-4 font-weight-bold"> Contact us</p>
 
                     <p class="pt-5"> {{ address.street_address1 }}</p>
                     <p> {{ address.town_or_city }}</p>
@@ -113,8 +115,8 @@
                     <p> {{ address.country }}</p>
                     <p> {{ address.postcode }}</p>
 
-                    <p class="pt-4"> email: {{ address.email }}</p>
-                    <p class="pb-5"> phone: {{ address.phone_number }}</p>
+                    <p class="pt-4 nav-link font-weight-bold"> {{ address.email }}</p>
+                    <p class="pb-5 nav-link font-weight-bold"> {{ address.phone_number }}</p>
 
                 </div>
             </div>
