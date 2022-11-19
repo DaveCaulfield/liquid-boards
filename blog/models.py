@@ -20,7 +20,7 @@ class Blog(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField(blank=True, null=True)
-    excerpt = models.TextField(blank=True)
+    excerpt = models.TextField(max_length=100, blank=True)
     likes = models.ManyToManyField(
         User, related_name='like_blog', blank=True)
     

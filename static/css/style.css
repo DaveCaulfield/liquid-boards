@@ -26,12 +26,6 @@ h2 {
   height: 80vh;
 }
 
-.waves {
-  object-fit: cover;
-  width: 100vw;
-  height: 20vh;
-}
-
 .input-group {
   width: 100px;
   max-width: 85vw;
