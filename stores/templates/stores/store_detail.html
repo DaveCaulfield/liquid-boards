@@ -49,7 +49,7 @@
     <!-- We want a for loop inside the empty control tags to iterate through each staff member in staff -->
     {% for staff in staff %}
 
-    <div class="staff-card col-md-6 offset-md-3 card mb-1  mt-3 ">
+    <div class="staff-card col-lg-10 offset-lg-1  col-xl-8 offset-lg-2 card mb-1  mt-3 ">
 
         <div class="card-body">
             <div class="row">
@@ -60,7 +60,7 @@
                         src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1666617492/static/css/sunset-skater2_ygtk3o.jpg"
                         alt="default image for staff">
                     {% else %}
-                    <img class="card-img-top-post" src=" {{ staff.staff_photo.url }}" alt="image of staff">
+                    <img class="card-staff_img_detail" src=" {{ staff.staff_photo.url }}" alt="image of staff">
                     {% endif %}
 
                 </div>

@@ -41,8 +41,6 @@
     {% block extra_js %}
     {% endblock %}
 
-
-
     <title>Liquid Boards {% block extra_title %}{% endblock %}</title>
 </head>
 
@@ -55,6 +53,7 @@
                 </a>
             </div>
 
+            <!-- Navigation Menu -->
             <div class="col bg-black px-0 ">
                 <nav class="navbar navbar-expand-lg navbar-light ">
                     <button class="navbar-toggler icon" type="button" data-toggle="collapse" data-target="#main-nav"
@@ -64,11 +63,11 @@
 
                     <div class="collapse navbar-collapse" id="main-nav">
                         <ul class="navbar-nav w-auto mx-auto">
+                        <!-- Display Online Shop links -->
                             <li class="nav-item dropdown">
                                 <a class="logo-font nav-link text-silver mr-5 py-1" href="#" id="boards-link"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Boards
-                                </a>
+                                    Online Shop</a>
                                 <div class="dropdown-menu border-0 bg-black " aria-labelledby="boards-link">
                                     <a href="{% url 'products' %}?category=skateboard"
                                         class="dropdown-item text-silver">Skateboards</a>
@@ -78,49 +77,17 @@
                                         class="dropdown-item text-silver">Surfskates</a>
                                     <a href="{% url 'products' %}?category=skateboard,longboard,surfskate"
                                         class="dropdown-item text-silver">All Boards</a>
+                                    <a href="{% url 'products' %}?category=trucks"
+                                        class="dropdown-item text-silver">Trucks</a>
+                                    <a href="{% url 'products' %}?category=wheels"
+                                        class="dropdown-item text-silver">Wheels</a>
                                 </div>
                             </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="logo-font nav-link text-silver mr-5 py-1"
-                                    href="{% url 'products' %}?category=trucks" id="wheels-trucks"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trucks</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="logo-font nav-link text-silver mr-5 py-1"
-                                    href="{% url 'products' %}?category=wheels"
-                                    class="dropdown-item text-silver">Wheels</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="logo-font nav-link text-silver mr-5 py-1" href="#" id="boards-link"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    All product
-                                </a>
-                                <div class="dropdown-menu border-0 bg-black " aria-labelledby="boards-link">
-                                    <a href="{% url 'products' %}?category=skateboard,longboard,surfskate,trucks,wheels"
-                                        class="dropdown-item text-silver">All Products</a>
-                                    <a href="{% url 'products' %}?sort=price&direction=asc"
-                                        class="dropdown-item text-silver">By Price</a>
-                                    <a href="{% url 'products' %}?sort=category&direction=asc"
-                                        class="dropdown-item text-silver">By Category</a>
-                                    <a href="{% url 'products' %}?sort=brand&direction=asc"
-                                        class="dropdown-item text-silver">By Brand</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="logo-font nav-link text-silver mr-5 py-1"
-                                    href="{% url 'blog' %}?"
-                                    class="dropdown-item text-silver">Blog</a>
-                            </li>
-
+                            <!-- Display Local Shop Links -->
                             <li class="nav-item dropdown">
                                     <a class="logo-font nav-link text-silver mr-5 py-1" href="#" id="boards-link"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Local Shops
-                                </a>
+                                    Local Shops</a>
                                 <div class="dropdown-menu border-0 bg-black " aria-labelledby="boards-link">
                                     <a href="{% url 'stores'  %}"
                                         class="dropdown-item text-silver">All Shops</a>
@@ -129,12 +96,20 @@
                                     <a href="{% url 'store_detail' 4 %}"
                                         class="dropdown-item text-silver">New York</a>
                                     <a href="{% url 'store_detail' 3 %}"
-                                        class="dropdown-item text-silver">New Zealand</a>
-                                    
+                                        class="dropdown-item text-silver">New Zealand</a>   
                                 </div>
-
                             </li>
-
+                            <!-- Display About Link -->
+                            <li class="nav-item dropdown">
+                                <a class="logo-font nav-link text-silver mr-5 py-1"
+                                    href="" >About</a>
+                            </li>
+                            <!-- Display Blog Link -->
+                            <li class="nav-item dropdown">
+                                <a class="logo-font nav-link text-silver mr-5 py-1"
+                                    href="{% url 'blog' %}?"
+                                    class="dropdown-item text-silver">Blog</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -236,7 +211,8 @@
 
 
 <!-- Footer -->
-<footer class="footer mt-auto dark-bg">
+
+<footer class="footer mt-auto">
     <div class="container ">
         <div class="social-media"></div>
         <ul class="social-networks">
