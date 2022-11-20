@@ -48,11 +48,13 @@
 <body class="d-flex flex-column min-vh-100">
     <header class="container-fluid bg-black fixed-top">
         <div id="topnav" class="row pt-lg-2 ">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+            <div class="col-12 col-lg-4 my-0 py-0 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="shop-name  my-0">LIQUID BOARDS</h2>
+                    <img class="shop-logo-navbar my-0" style="height:3rem" style=" width:25rem"
+                    src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1668961619/static/img/liquid-boards-logo2_zftx58.png"
+                    alt="default image for store">
                 </a>
-            </div>
+            </div>  
 
             <!-- Navigation Menu -->
             <div class="col  px-0 ">
@@ -103,7 +105,7 @@
                             <!-- Display About Link -->
                             <li class="nav-item dropdown">
                                 <a class="logo-font nav-link text-silver mr-5 py-1"
-                                    href="" >About</a>
+                                    href="{% url 'about' %}">About</a>
                             </li>
                             <!-- Display Blog Link -->
                             <li class="nav-item dropdown">

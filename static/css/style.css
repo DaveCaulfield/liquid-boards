@@ -86,9 +86,7 @@ a.category-badge > span.badge:hover {
   font-size: 2rem;
   border-radius: 15px;
 }
-/* -------------- css from codeinstitute boutique ado project -------------*/
 
-/* from Bulma */
 .icon {
   align-items: center;
   display: inline-flex;
@@ -98,7 +96,7 @@ a.category-badge > span.badge:hover {
 }
 
 .main-logo-link {
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 .logo-font {
