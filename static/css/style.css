@@ -71,8 +71,14 @@ a.category-badge > span.badge:hover {
   color: #fff !important;
 }
 
+.navbar-toggler{
+  background: silver !important;
+  /* color: #fff !important; */
+  height: 25px;
+  width: 25px;
+  margin-bottom: 20px;
 
-
+}
 /* -------------- css from codeinstitute boutique ado project -------------*/
 
 /* from Bulma */
@@ -89,7 +95,7 @@ a.category-badge > span.badge:hover {
 }
 
 .logo-font {
-color:black;
+color:white;
 }
 
 .btn-black {
