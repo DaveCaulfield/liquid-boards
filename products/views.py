@@ -13,12 +13,10 @@ from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
 
 
-# Create your views here.
-
-
 def all_products(request):
-    """ a View to return allproducts page """
-
+    """
+    a View to return allproducts page
+    """
     products = Product.objects.all()
     query = None
     categories = None
@@ -50,10 +48,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                               request, "You didn't enter any search criteria!"
+                               )
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(brand__icontains=query) 
+            queries = Q(name__icontains=query) | Q(brand__icontains=query)
             products = products.filter(queries)
 
     currrent_sorting = f'{sort}_{direction}'
@@ -64,16 +64,17 @@ def all_products(request):
         'current_categories': categories,
         'currrent_sorting': currrent_sorting,
     }
- 
+
     return render(request, 'products/products.html', context)
 
 
 def product_detail(request, product_id):
-    """ a View to return individual product details page """
-
+    """
+    a View to return individual product details page
+    """
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.all()
-    
+
     template = 'products/product_detail.html'
     context = {
         'product': product,
@@ -84,8 +85,8 @@ def product_detail(request, product_id):
         if request.method == 'POST':
             form = ReviewForm(request.POST)
             if form.is_valid():
-                # We're only getting the review text from the frontend. We need to associate
-                # the product and logged-in user ourselves.
+                # only getting the review text from the frontend.
+                # need to associate the product and logged-in user ourselves.
                 # Create review object but don't commit to database yet.
                 review = form.save(commit=False)
                 review.product = product
@@ -99,10 +100,6 @@ def product_detail(request, product_id):
         context['form'] = form
 
     return render(request, template, context)
-
-
-
-
 
 
 @login_required
@@ -119,22 +116,24 @@ def add_review(request, product_id):
             review.product = product
             review.author = UserProfile.objects.get(user__id=request.user.id)
             review.save()
-            
+
             messages.success(request, 'Your review has been \
                 successfully added.')
-            return redirect(reverse('product_detail', kwargs={"product_id": product.id }))
+            return redirect(
+                            reverse('product_detail',
+                                    kwargs={"product_id": product.id})
+                            )
         else:
             messages.error(request, 'There is an error. Please try again.')
     else:
         form = ReviewForm()
-    template = 'reviews/add_review.html'
+    template = 'product/product_detail.html'
     context = {
         'form': form,
         'product': product,
     }
 
     return render(request, template, context)
-
 
 
 @login_required
@@ -184,34 +183,11 @@ def delete_review(request, review_id):
         return redirect(reverse("product_detail", args=[review.product.id]))
 
 
-
-# @login_required
-# def delete_review(request, review_id):
-#     """ Delete a review """
-#     review = get_object_or_404(Review, pk=review_id)
-    
-#     if not request.user == review.author.user:
-#         messages.error(request, 'Sorry, only the shop owner can do that.')
-#         return redirect(reverse('home'))
-
-    
-#     review.delete()
-#     messages.success(request, 'Review deleted.')
-#     return redirect(reverse('products'))
-
-
-
-
-
-
-
-
-
-
-
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    """
+    Add a product to the store
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only the shop owner can do that.')
         return redirect(reverse('home'))
@@ -223,10 +199,13 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                            request, 'Failed to add product. \
+                            Please ensure the form is valid.'
+                            )
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -237,7 +216,9 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    """
+    Edit a product in the store
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only the shop owner can do that.')
         return redirect(reverse('home'))
@@ -250,7 +231,10 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                            request, 'Failed to update product. \
+                            Please ensure the form is valid.'
+                            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -263,9 +247,12 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product """
+    """
+    Delete a product
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only the shop owner can do that.')
         return redirect(reverse('home'))

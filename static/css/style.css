@@ -73,9 +73,8 @@ a.category-badge > span.badge:hover {
 
 .navbar-toggler{
   background: silver !important;
-  /* color: #fff !important; */
   height: 25px;
-  width: 25px;
+  width: 30px;
   margin-bottom: 20px;
 
 }
@@ -95,7 +94,7 @@ a.category-badge > span.badge:hover {
 }
 
 .logo-font {
-color:white;
+color:black;
 }
 
 .btn-black {
