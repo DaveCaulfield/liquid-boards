@@ -278,6 +278,7 @@ input[name='q']::placeholder {
   align-items: center;
   justify-content: center;
   list-style-type: none; 
+
 }
 
 .social-networks a {
@@ -292,6 +293,7 @@ input[name='q']::placeholder {
   font-size: 190%;
   padding: 16px;
   justify-content: space-around;
+  padding-right:24px;
 }
 
 .social-networks i:hover {
