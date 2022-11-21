@@ -1,37 +1,46 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'stores/css/stores.css' %}">
 {% endblock %}
 
 {% block content %}
 
 <div class="overlay"></div>
-<div class="container ">
-    <div class="row">
-<div class="col-12 text-center bg-black my-5 ">   
-                    <img class="" style="height:10rem" style=" width:40rem"
+
+<div class="row">
+    <div class="col mb-4 mt-3">
+        <div class="card-body mt-2">
+            <!-- Display logo image -->
+            <div class="img_container about-logo bg-black">
+                <img class="card-logo_store_details"
                     src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1668961619/static/img/liquid-boards-logo2_zftx58.png"
-                    alt="brand logo">  
-            </div>  
+                    alt="default image for logo">
+            </div>
         </div>
     </div>
 </div>
 
 
-<div class="col-lg-6 offset-lg-3 text-center mt-5">   
+  
+
+
+
+<div class="col-lg-6 offset-lg-3 text-center mt-5">  
     
-    <p> Liquid Boards brings local skateshop vibes to a global online community</p>
-    <p> The site was setup by three skate shop owners from Dublin, New York and New Zealand </p>
-    
+    <p class="pb-5" > A local skateshop vibe for a global skateboard tribe.</p>
     
    
-    
+    <p class="pb-2"> Liquid Boards was setup by three independent skate shop owners from Dublin, New York and New Zealand. </p>
+
+    <p class="pb-2"> Demand for skateboards has boomed over the last few years but a lack of global stock and supplychains has limited their availability.</p>
+
+    <p class="pb-2"> The three skateshops have pooled their contacts across three continents and have combined their online presence allowing them to deliver to a larger community.</p>
+
+     
 </div>  
-</div>
-</div>
-</div>
+
 
 
 {% endblock %}

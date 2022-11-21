@@ -92,15 +92,17 @@ store details page */
 
 
 
-
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+  .header-container {
+      padding-top: 30px;
+  }
+}
 
 
 /* small screen */
 @media (max-width:1199px) {
-  .header-container {
-      padding-top: 160px;
-  }
-
+ 
   body {
       height: calc(100vh - 260px);
   }

@@ -95,9 +95,6 @@ a.category-badge > span.badge:hover {
   width: 1.5rem;
 }
 
-.main-logo-link {
-  /* width: fit-content; */
-}
 
 .logo-font {
 color:black;
@@ -301,6 +298,11 @@ input[name='q']::placeholder {
   color: grey;
 }
 
+/* --------------about page----- */
+
+
+
+
 
 
 
@@ -323,10 +325,10 @@ input[name='q']::placeholder {
       z-index: 1030;
   }
 
-  .header-container {
-      padding-top: 120px;
+  /* .header-container {
+      padding-top: 60px;
       
-  }
+  } */
 }
 
 
@@ -334,11 +336,16 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
   .header-container {
-      padding-top: 160px;
+      padding-top: 100px;
   }
 
   body {
       height: calc(100vh - 260px);
+  }
+
+
+  .about-logo {
+    display: none;
   }
 }
 
