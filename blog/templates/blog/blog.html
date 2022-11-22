@@ -31,12 +31,13 @@
                                     <div class="card-body blog-card">
                                         <a href="{% url 'blog_detail' blog.slug %}" class="blog-link">
                                         <div class="image-container">
-                                            {% if "placeholder" in blog.featured_image.url %}
+                                            {% if "placeholder" in blog.blog_image.url %}
                                             <img class="card-img-top"
-                                                src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1666617492/static/css/sunset-skater2_ygtk3o.jpg"
+                                            src="{{ MEDIA_URL }}noimage.png"
+                                            
                                                 alt="default image for blog">
                                             {% else %}
-                                            <img class="card-img-top" src=" {{ blog.featured_image.url }}"
+                                            <img class="card-img-top" src=" {{ blog.blog_image.url }}"
                                                 alt="image of blog post">
                                             {% endif %}
                                             <div class="image-flash">

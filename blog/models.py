@@ -18,7 +18,8 @@ class Blog(models.Model):
         User, on_delete=models.CASCADE, related_name="blog")
     created_on = models.DateTimeField(auto_now=True)
     updated_on = models.DateTimeField(auto_now=True)
-    featured_image = CloudinaryField('image', default='placeholder')
+    blog_image = models.ImageField('blog_image', default='placeholder')
+    blog_image_url = models.URLField(max_length=1024, null=True, blank=True)
     content = models.TextField(blank=True, null=True)
     excerpt = models.TextField(max_length=100, blank=True)
     likes = models.ManyToManyField(
