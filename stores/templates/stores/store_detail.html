@@ -27,10 +27,11 @@
                 <div class="img_container bg-black mb-5">
                     {% if "logo_placeholder" in stores.logo_image.url %}
                     <img class="card-logo_store_details"
-                        src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1666617492/static/css/sunset-skater2_ygtk3o.jpg"
+                    src="{{ MEDIA_URL }}noimage.png"
+                    
                         alt="default image for store">
                     {% else %}
-                    <img class="card-logo_store_details" src=" {{ store.logo_image.url }}" alt="image of store">
+                    <img class="card-logo_store_details" src=" {{ store.logo_image.url }}" alt="default logo for store" alt="default image of store">
                     {% endif %}
                 </div>
                 <div class="card-text text-grey text-center col-lg-6 offset-lg-3">
@@ -61,10 +62,10 @@
                 <div class="staff_img_detail w-100 h-100 mt-3">
                     {% if "staff_placeholder" in staff.staff_photo.url %}
                     <img class="card-staff_img_detail "
-                        src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1666617492/static/css/sunset-skater2_ygtk3o.jpg"
+                    src="{{ MEDIA_URL }}noimage.png" 
                         alt="default image for staff">
                     {% else %}
-                    <img class="card-staff_img_detail" src=" {{ staff.staff_photo.url }}" alt="image of staff">
+                    <img class="card-staff_img_detail" src=" {{ staff.staff_image.url }}" alt="image of staff">
                     {% endif %}
 
                 </div>
