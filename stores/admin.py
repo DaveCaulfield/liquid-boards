@@ -18,8 +18,8 @@ class StoreAdmin(admin.ModelAdmin):
               'owner',
               'logo_image',
               'logo_url',
-              'featured_image',
-              'image_url',
+              'store_image',
+              'store_image_url',
               )
 
     list_filter = ('name', 'location', 'owner')

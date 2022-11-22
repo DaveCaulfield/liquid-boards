@@ -11,10 +11,10 @@ class Store(models.Model):
     name = models.CharField(max_length=200, unique=True)
     location = models.CharField(max_length=200, null=False, blank=False)
     about = models.TextField(max_length=500, null=False, blank=False)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    featured_image = CloudinaryField('image', default='placeholder')
+    store_image_url = models.URLField(max_length=1024, null=True, blank=True)
+    store_image = models.ImageField(null=True, blank=True)
     logo_url = models.URLField(max_length=1024, null=True, blank=True)
-    logo_image = CloudinaryField('logo', default='logo_placeholder')
+    logo_image = models.ImageField(null=True, blank=True)
     owner = models.CharField(max_length=200, null=False, blank=False)
 
     def __str__(self):
@@ -53,7 +53,8 @@ class Staff(models.Model):
     first_name = models.CharField(max_length=200, null=False, blank=False)
     surname = models.CharField(max_length=200, null=False, blank=False)
     store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name='staff')
-    staff_photo = CloudinaryField('staff', default='staff_placeholder')
+    staff_image_url = models.URLField(max_length=1024, null=True, blank=True)
+    staff_image = models.ImageField(null=True, blank=True)
     job_title = models.CharField(max_length=200, null=False, blank=False)
     bio = models.TextField(blank=True)
     start_date = models.DateField(null=False, blank=False)
