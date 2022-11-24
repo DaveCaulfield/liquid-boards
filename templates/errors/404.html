@@ -16,34 +16,32 @@
         <div class="card-body mt-2 ">
             <!-- Display logo image -->
             <div class="img_container about-logo bg-black">
-                <img class="card-logo_store_details"
-                src="{{ MEDIA_URL }}noimage.png"
-                    alt="default image for logo">
+                <img class="card-logo_store_details" src="{{ MEDIA_URL }}noimage.png" alt="default image for logo">
             </div>
         </div>
     </div>
 </div>
 
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
-    <div class="container ">
-        <div class="row ">
-            <div class=" col my-auto text-center logo-font text-black">
-                <h1>404</h1>
-                <h3 class="text-black">Whoops!</h3>
-                <h3 class="text-black">Page Not Found</h3>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" 
-                            class="btn-outline-black btn btn-lg rounded-0 text-uppercase py-3 text-white bg-black mt-5">
-                                Return to shop
-                        </a>
-                    </h4>
-                </div>
+</div>
+<div class="container ">
+    <div class="row ">
+        <div class=" col my-auto text-center logo-font text-black">
+            <h1>404</h1>
+            <h3 class="text-black pt-4">Whoops!</h3>
+            <h3 class="text-black pt-4">Page Not Found</h3>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'products' %}"
+                        class="btn-outline-black btn btn-lg rounded-0 text-uppercase py-3 text-white bg-black mt-5">
+                        Return to shop
+                    </a>
+                </h4>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
