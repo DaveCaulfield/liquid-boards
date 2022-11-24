@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import handler404
+from .views import handler404, handler400, handler403, handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,3 +34,7 @@ urlpatterns = [
 
 
 handler404 = 'liquidboards.views.handler404'
+handler400 = 'liquidboards.views.handler400'
+handler403 = 'liquidboards.views.handler403'
+handler500 = 'liquidboards.views.handler500'
+
