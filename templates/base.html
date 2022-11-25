@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
-       <!-- Begin Mailchimp Signup Form -->
-       <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
-      
+    <!-- Begin Mailchimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
 
@@ -79,8 +79,8 @@
                     <div class="collapse navbar-collapse " id="main-nav">
                         <ul class="navbar-nav w-auto mx-auto">
 
-                            <!-- Display Home Link -->
-                            <li class="nav-item dropdown">
+                             <!-- Display Home Link -->
+                             <li class="nav-item dropdown">
                                 <a class="logo-font nav-link text-silver mr-5 py-1" href="{% url 'home' %}">Home</a>
                             </li>
 
@@ -225,120 +225,122 @@
     {% endblock %}
 
 
+<!-- Footer -->
+
+<footer class="footer mt-auto">
+    <div class="container-footer">
 
 
-
-    <!-- Footer -->
-
-    <footer class="footer mt-auto">
-        <div class="container-footer">
-
-
-        <!-- Begin Mailchimp Signup Form -->
-       
-            <!-- /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */ -->
-        
-       <div class="row">
-        
-        <div class="col-lg-4 offset-lg-4 text-center mt-5">
-            <div id="mc_embed_signup">
-                <form
-                    action="https://herokuapp.us21.list-manage.com/subscribe/post?u=d4ea680cc8dae8be23080e7ab&amp;id=63e9c87a7c&amp;f_id=0071c7e1f0"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                    target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll">
-                    <strong> <p  class="text-muted">Sign up to our newsletter</p></strong>
+    <!-- Begin Mailchimp Signup Form -->
+   
+        <!-- /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */ -->
+    
+   <div class="row">
+    
+    <div class="col-lg-4 offset-lg-4 text-center mt-5">
+        <div id="mc_embed_signup">
+            <form
+                action="https://herokuapp.us21.list-manage.com/subscribe/post?u=d4ea680cc8dae8be23080e7ab&amp;id=63e9c87a7c&amp;f_id=0071c7e1f0"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                <strong> <p  class="text-muted">Sign up to our newsletter</p></strong>
+                </div>
+                    <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+                    <div class="mc-field-group">
+                        <!-- <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+                        </label> -->
+                        <input type="email" value="" name="EMAIL" class="required email " id="mce-EMAIL" required  placeholder="Email address">
+                        <!-- <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span> -->
+                        <!-- <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+                        </label> -->
                     </div>
-                        <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
-                        <div class="mc-field-group">
-                            <!-- <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
-                            </label> -->
-                            <input type="email" value="" name="EMAIL" class="required email " id="mce-EMAIL" required  placeholder="Email address">
-                            <!-- <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span> -->
-                            <!-- <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
-                            </label> -->
-                        </div>
-                        <div id="mce-responses" class="clear foot">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                name="b_d4ea680cc8dae8be23080e7ab_63e9c87a7c" tabindex="-1" value=""></div>
-                        <div class="optionalParent">
-                            <div class="clear foot">
-                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                    class="button">
-                                <p class="brandingLogo"><a href="http://eepurl.com/ieDe7r"
-                                        title="Mailchimp - email marketing made easy and fun"><img
-                                            src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" ></a>
-                                </p>
-                            </div>
+                    <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            name="b_d4ea680cc8dae8be23080e7ab_63e9c87a7c" tabindex="-1" value=""></div>
+                    <div class="optionalParent">
+                        <div class="clear foot">
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                class="button">
+                            <p class="brandingLogo"><a href="http://eepurl.com/ieDe7r"
+                                    title="Mailchimp - email marketing made easy and fun"><img
+                                        src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" ></a>
+                            </p>
                         </div>
                     </div>
                 </form>
-            </div>
+                </div>
             
-            <!--End mc_embed_signup-->
-    
-
-
-
         </div>
 
-        <div class="social-media mt-5">
-
-        <ul class="social-networks">
-            <li>
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                    aria-label="Visit our Facebook page (opens in new tab)"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (opens in new tab)"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li>
-                <a href="https://twitter.com/" target="_blank" rel="noopener"
-                    aria-label="Visit our Twitter page (opens in new tab)"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/" target="blank" rel="noopener"
-                    aria-label="Visit out Youtube page (opens in new tab)"><i class="fab fa-youtube"></i></a>
-            </li>
-        </ul>
+    
+        
+        <!--End mc_embed_signup-->
 
 
 
-       </div>
-       
 
     </div>
 
-    </footer>
+    <div class="social-media mt-5">
+
+    <ul class="social-networks">
+        <li>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Facebook page (opens in new tab)"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Instagram page (opens in new tab)"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+            <a href="https://twitter.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Twitter page (opens in new tab)"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/" target="blank" rel="noopener"
+                aria-label="Visit out Youtube page (opens in new tab)"><i class="fab fa-youtube"></i></a>
+        </li>
+    </ul>
 
 
-<!-- mailchimpl scripts -->
+
+   </div>
+   
+
+</div>
+
+</footer>
+
+
+   
+
+    <!-- mailchimpl scripts -->
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-        <script type='text/javascript'>
-            (function ($) {
-                window.fnames = new Array();
-                window.ftypes = new Array();
-                fnames[0] = 'EMAIL';
-                ftypes[0] = 'email';
-                fnames[1] = 'FNAME';
-                ftypes[1] = 'text';
-                fnames[2] = 'LNAME';
-                ftypes[2] = 'text';
-                fnames[3] = 'ADDRESS';
-                ftypes[3] = 'address';
-                fnames[4] = 'PHONE';
-                ftypes[4] = 'phone';
-                fnames[5] = 'BIRTHDAY';
-                ftypes[5] = 'birthday';
-            }(jQuery));
-            var $mcj = jQuery.noConflict(true);
-        </script>
+    <script type='text/javascript'>
+        (function ($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL';
+            ftypes[0] = 'email';
+            fnames[1] = 'FNAME';
+            ftypes[1] = 'text';
+            fnames[2] = 'LNAME';
+            ftypes[2] = 'text';
+            fnames[3] = 'ADDRESS';
+            ftypes[3] = 'address';
+            fnames[4] = 'PHONE';
+            ftypes[4] = 'phone';
+            fnames[5] = 'BIRTHDAY';
+            ftypes[5] = 'birthday';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+    </script>
 
 
 </body>
