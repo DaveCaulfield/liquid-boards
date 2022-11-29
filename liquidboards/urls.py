@@ -33,8 +33,8 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-handler404 = 'liquidboards.views.handler404'
 handler400 = 'liquidboards.views.handler400'
 handler403 = 'liquidboards.views.handler403'
+handler404 = 'liquidboards.views.handler404'
+handler405 = 'liquidboards.views.handler405'
 handler500 = 'liquidboards.views.handler500'
-
