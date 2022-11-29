@@ -148,10 +148,6 @@ def delete_comment(request, comment_id):
     """
     comment = get_object_or_404(Comment, pk=comment_id)
 
-    # python debugger
-    # more info here: https://docs.python.org/3/library/pdb.html
-    # import pdb; pdb.set_trace()
-
     if request.user == comment.commenter.user or request.user.is_superuser:
         comment.delete()
         messages.success(request, "Comment deleted!")

@@ -5,8 +5,6 @@ from cloudinary.models import CloudinaryField
 from django.template.defaultfilters import slugify
 
 
-
-
 class Blog(models.Model):
     """
     Model for Blog postings
@@ -24,13 +22,12 @@ class Blog(models.Model):
     excerpt = models.TextField(max_length=100, blank=True)
     likes = models.ManyToManyField(
         User, related_name='like_blog', blank=True)
-    
+
     class Meta:
         """
         Orders blog postings by date created - newest first
         """
         ordering = ['-created_on']
-
 
     def __str__(self):
         """
@@ -63,8 +60,8 @@ class Comment(models.Model):
     name = models.CharField(max_length=80)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    
-    class Meta:  
+
+    class Meta:
         """
         Orders blog posts by date created - oldest first
         """

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
 <!-- blog section -->
 <div class="overlay"></div>
 <section id="blog-posts">
-  
+
     <div class="container-fluid">
         <div class="row">
 
@@ -25,92 +25,74 @@
                 <div class="row">
                     {% for blog in blog_list %}
                     <div class=" col-xl-4">
-                        
-                            <div class="card-deck">
-                                <div class="card mb-4">
-                                    <div class="card-body blog-card">
-                                        <a href="{% url 'blog_detail' blog.slug %}" class="blog-link">
+
+                        <div class="card-deck">
+                            <div class="card mb-4">
+                                <div class="card-body blog-card">
+                                    <a href="{% url 'blog_detail' blog.slug %}" class="blog-link">
                                         <div class="image-container">
                                             {% if "placeholder" in blog.blog_image.url %}
-                                            <img class="card-img-top"
-                                            src="{{ MEDIA_URL }}noimage.png"
-                                            
+                                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png"
                                                 alt="default image for blog">
                                             {% else %}
                                             <img class="card-img-top" src=" {{ blog.blog_image.url }}"
                                                 alt="image of blog post">
                                             {% endif %}
                                             <div class="image-flash">
-                                                
+
                                                 <h4 class="post-title pt-2 ">{{ blog.title }}</h4>
-                                            </a>
-                                                <p class="card-text text-muted pb-1">by {{ blog.author }}, 
-                                                     {{ blog.created_on | date:"j F Y" }}</p>
-                                                     <hr class="text-grey w-75 mx-auto pb-3">
-                                                    <p class="text-muted "> {{ blog.excerpt }}</p>                                              
-                                            </div>
-                                        </div>
-                                    
-                                   
-                           
-                                        <div>
-                                            <i class="fas fa-thumbs-up text-sunset"></i>
-                                            <span class="text-silver ">{{ blog.number_of_likes }}</span>
-                                        </div>
-
-
-
-
-
-
-                                    </div>
+                                    </a>
+                                    <p class="card-text text-muted pb-1">by {{ blog.author }},
+                                        {{ blog.created_on | date:"j F Y" }}</p>
+                                    <hr class="text-grey w-75 mx-auto pb-3">
+                                    <p class="text-muted "> {{ blog.excerpt }}</p>
                                 </div>
                             </div>
-                      
-                        
+
+                            <div>
+                                <i class="fas fa-thumbs-up text-sunset"></i>
+                                <span class="text-silver ">{{ blog.number_of_likes }}</span>
+                            </div>
+                        </div>
                     </div>
-                    {% if forloop.counter|divisibleby:3 %}
                 </div>
-                <div class="row">
-                    {% endif %}
-                    {% endfor %}
-                </div>
-
-                <!-- Pagination menu -->
-                <div class="text-center mb-5">
-                    {% if is_paginated %}
-                    {% if page_obj.has_previous %}
-                    <a class="btn btn-dark-outline  mb-4" href="?page=1">First</a>
-                    <a class="btn btn-dark-outline  mb-4" href="?page={{ page_obj.previous_page_number }}">
-                        <i class="fa fa-chevron-circle-left "></i>
-
-                    </a>
-                    {% endif %}
-
-                    {% for num in page_obj.paginator.page_range %}
-                    {% if page_obj.number == num %}
-                    <a class=" btn btn-secondary mb-4" href="?page={{ num }}">{{ num }}</a>
-                    {% elif num > page_obj.number|add:'-2' and num < page_obj.number|add:'2' %}
-                    <a class="btn btn-dark-outline mb-4" href="?page={{ num }}">{{ num }}</a>
-                    {% endif %}
-                    {% endfor %}
-
-                    {% if page_obj.has_next %}
-                    <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.next_page_number }}">
-                        <i class="fa fa-chevron-circle-right"></i></a>
-                    <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
-                    {% endif %}
-                    {% endif %}
-                </div>
-
             </div>
+            {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
         </div>
 
+        <!-- Pagination menu -->
+        <div class="text-center mb-5">
+            {% if is_paginated %}
+            {% if page_obj.has_previous %}
+            <a class="btn btn-dark-outline  mb-4" href="?page=1">First</a>
+            <a class="btn btn-dark-outline  mb-4" href="?page={{ page_obj.previous_page_number }}">
+                <i class="fa fa-chevron-circle-left "></i>
+
+            </a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+            <a class=" btn btn-secondary mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% elif num > page_obj.number|add:'-2' and num < page_obj.number|add:'2' %}
+            <a class="btn btn-dark-outline mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+            <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.next_page_number }}">
+                <i class="fa fa-chevron-circle-right"></i></a>
+            <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+            {% endif %}
+        </div>
     </div>
-
+    </div>
+    </div>
 </section>
-
-
-
 
 {% endblock content%}

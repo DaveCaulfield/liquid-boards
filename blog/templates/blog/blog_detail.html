@@ -3,13 +3,11 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
 {% endblock %}
 
 {% block content %}
 {% load crispy_forms_tags %}
-
-
 
 <!-- Display Blog Details -->
 <div class="overlay"></div>
@@ -18,38 +16,33 @@
         <div class="col-lg-10 offset-lg-1 card mb-4 mt-3 left  top">
             <div class="card-body mt-2">
 
-                 <!-- Display blog image -->
-                 <div class="img_detail mt-3 mb-3">
+                <!-- Display blog image -->
+                <div class="img_detail mt-3 mb-3">
                     {% if "placeholder" in blog.blog_image.url %}
-                    <img class="card-img-top-post "
-                    src="{{ MEDIA_URL }}noimage.png"
-                        alt="default image for blog">
+                    <img class="card-img-top-post " src="{{ MEDIA_URL }}noimage.png" alt="default image for blog">
                     {% else %}
                     <img class="card-img-top-post" src=" {{ blog.blog_image.url }}" alt="image of blog">
                     {% endif %}
-
                 </div>
-                
+
                 <h4 class="card-title text-black">{{ blog.title }}</h4>
                 <p class="card-text text-muted">Blog post by {{ blog.author }}</p>
                 <p class="card-text text-muted">Posted on {{ blog.created_on | date:"j F Y" }}</p>
-               
-
 
                 <div class="row ">
                     <div class=" ml-2 mb-3 ">
                         <!-- if user is authenticated display likes feature -->
-                        
+
                         {% if user.is_authenticated %}
                         <form class="d-inline" action="{% url 'blog_like' blog.slug %}" method="POST">
                             {% csrf_token %}
                             <strong>
                                 {% if liked %}
-                                
+
                                 <button type="submit" name="blog_id" value="{{blog.slug}}" class="btn-like"><i
                                         class="fas fa-thumbs-up text-sunset ml-3"></i></button>
                                 {% else %}
-                                
+
                                 <button type="submit" name="blog_id" value="{{blog.slug}}" class="btn-like"><i
                                         class="far fa-thumbs-up text-sunset ml-3"></i></button>
                                 {% endif %}
@@ -58,9 +51,7 @@
                         {% else %}
                         <span class="text-secondary"><i class="far fa-thumbs-up text-sunset ml-3"></i></span>
                         <span class="text-secondary">{{ blog.number_of_likes }}</span>
-
                         {% endif %}
-
 
                     </div>
                     <!-- chat icon with number of comments -->
@@ -70,7 +61,6 @@
                             {{ total_comments }}</strong>
                         {% endwith %}
                     </div>
-                    
                 </div>
 
                 <p class="card-text">
@@ -78,20 +68,15 @@
                     {{ blog.content | safe }}
                 </p>
 
-
                 <div class="row ">
                     <div class="mt-3 mb-3 ">
-
 
                         <!-- if user is authenticated display likes feature -->
                         {% if user.is_authenticated %}
                         <form class="d-inline" action="" method="POST">
                             {% csrf_token %}
-                  
-                        {% endif %}
-
+                            {% endif %}
                     </div>
-
                 </div>
             </div>
         </div>
@@ -122,20 +107,17 @@
 
                     {% if request.user.is_authenticated  %}
                     {% if request.user|lower == comment.name|lower or request.user.is_superuser %}
-    
-                        <small >
-                            <a href="{% url 'edit_comment' comment.id %}">Edit</a> |
-                            <a class="text-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
-                        </small>
-                        {% endif %}  
-                        {% endif %}
 
+                    <small>
+                        <a href="{% url 'edit_comment' comment.id %}">Edit</a> |
+                        <a class="text-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
+                    </small>
+                    {% endif %}
+                    {% endif %}
                 </div>
-                
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
-
 
             <!-- <div class="card-body "> -->
 
@@ -150,18 +132,14 @@
                     <button type="submit" class="btn btn-black rounded-0  mt-4">Submit</button>
                 </form>
 
-
                 <div class="text-center mt-5 mb-3">
                     <a class="arrow-up " href="#top">
                         <i class="fa fa-chevron-circle-up"></i>
                     </a>
                 </div>
-
             </div>
             {% endif %}
         </div>
     </div>
 </div>
-
-
 {% endblock content %}
