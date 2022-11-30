@@ -9,157 +9,172 @@
 
 <url>
   <loc>https://liquid-boards.herokuapp.com/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/about/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/?category=skateboard</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/?category=longboard</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/?category=surfskate</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/?category=skateboard,longboard,surfskate</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/?category=trucks</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/?category=wheels</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/stores/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/stores/6/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/stores/7/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/stores/5/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://liquid-boards.herokuapp.com/stores/8/</loc>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/blog/?</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/accounts/login/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/bag/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/21/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/20/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/19/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/1/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/2/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/22/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/16/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/15/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/17/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/products/18/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://liquid-boards.herokuapp.com/stores/?page=1</loc>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://liquid-boards.herokuapp.com/stores/?page=2</loc>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/blog/staten-island-skate-jam-2022/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/blog/surf-skate-festival-copenhagen/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/blog/a-new-zealand-epic/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://liquid-boards.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2022-11-30T10:21:03+00:00</lastmod>
+  <lastmod>2022-11-30T12:02:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
