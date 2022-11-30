@@ -116,10 +116,18 @@
                                     Local Shops</a>
                                 <div class="dropdown-menu border-0 bg-black " aria-labelledby="boards-link">
                                     <a href="{% url 'stores'  %}" class="dropdown-item text-silver">All Shops</a>
-                                    <a href="{% url 'store_detail' 6 %}" class="dropdown-item text-silver">Dublin</a>
+
+                                    {% for store in stores %}
+                                    <a href="{% url 'store_detail' store_id=store.id %}" class="dropdown-item text-silver">{{ store.location }}</a>
+                                    {% endfor%}
+
+
+
+
+                                    <!-- <a href="{% url 'store_detail' 6 %}" class="dropdown-item text-silver">Dublin</a>
                                     <a href="{% url 'store_detail' 7 %}" class="dropdown-item text-silver">New York</a>
-                                    <a href="{% url 'store_detail' 5 %}" class="dropdown-item text-silver">New
-                                        Zealand</a>
+                                    <a href="{% url 'store_detail' 5 %}" class="dropdown-item text-silver">New -->
+                                        <!-- Zealand</a> -->
                                 </div>
                             </li>
 

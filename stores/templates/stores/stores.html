@@ -28,6 +28,8 @@
                                 <div class="card-body bg-black">
                                     <a href="{% url 'store_detail' store.id %}" class="blog-link">
                                         <div class="image-container">
+
+                                        
                                             {% if "logo_placeholder" in store.logo_image.url %}
                                             <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png"
                                                 alt="default logo for store">
@@ -36,12 +38,12 @@
                                                 alt="image logo for store">
                                             {% endif %}
 
-                                            {% if "placeholder" in store.featured_image.url %}
-                                            <img class="card-img-bottom pb-1" src="{{ MEDIA_URL }}noimage.png"
-                                                alt="default feature image for store">
+                                            {% if "placeholder" in store.store_image.url %}
+                                                <img class="card-img-bottom pb-1" src="{{ MEDIA_URL }}noimage.png"
+                                                    alt="default feature image for store">
                                             {% else %}
-                                            <img class="card-img-bottom pb-1" src=" {{ store.store_image.url }}"
-                                                alt="feature image for store">
+                                                <img class="card-img-bottom pb-1" src=" {{ store.store_image.url }}"
+                                                    alt="feature image for store">
                                             {% endif %}
                                             <div class="image-flash">
                                             </div>
