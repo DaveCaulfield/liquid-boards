@@ -59,8 +59,6 @@ def checkout(request):
             order.original_bag = json.dumps(bag)
             order.save()
 
-
-
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -71,19 +69,17 @@ def checkout(request):
                     )
                     order_line_item.save()
 
-
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your bag wasn't found in our database."
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
 
-
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
-        
+
     else:
         bag = request.session.get('bag', {})
         if not bag:
@@ -131,7 +127,6 @@ def checkout(request):
         }
 
         return render(request, template, context)
-
 
 
 def checkout_success(request, order_number):

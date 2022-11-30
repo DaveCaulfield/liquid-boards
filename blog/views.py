@@ -37,12 +37,12 @@ class BlogDetail(View):
 
         return render(
             request,
-            "blog/blog_detail.html",
+            'blog/blog_detail.html',
             {
-                "blog": blog,
-                "comments": comments,
-                "liked": liked,
-                "comment_form": CommentForm()
+                'blog': blog,
+                'comments': comments,
+                'liked': liked,
+                'comment_form': CommentForm()
             },
         )
 
@@ -75,12 +75,12 @@ class BlogDetail(View):
 
         return render(
             request,
-            "blog/blog_detail.html",
+            'blog/blog_detail.html',
             {
-                "blog": blog,
-                "comments": comments,
-                "liked": liked,
-                "comment_form": CommentForm()
+                'blog': blog,
+                'comments': comments,
+                'liked': liked,
+                'comment_form': CommentForm()
             },
         )
 
@@ -131,11 +131,11 @@ def edit_comment(request, comment_id):
     else:
         form = CommentForm(instance=comment)
 
-    template = "blog/edit_comment.html"
+    template = 'blog/edit_comment.html'
     context = {
-        "form": form,
-        "comment": comment,
-        "blog": comment.blog,
+        'form': form,
+        'comment': comment,
+        'blog': comment.blog,
     }
 
     return render(request, template, context)
@@ -150,10 +150,10 @@ def delete_comment(request, comment_id):
 
     if request.user == comment.commenter.user or request.user.is_superuser:
         comment.delete()
-        messages.success(request, "Comment deleted!")
-        return redirect(reverse("blog_detail", args=[comment.blog.slug]))
+        messages.success(request, 'Comment deleted!')
+        return redirect(reverse('blog_detail', args=[comment.blog.slug]))
     else:
         messages.error(
             request,
-            "Only shop owner and comment author can do that.")
-        return redirect(reverse("blog_detail", args=[comment.blog.slug]))
+            'Only shop owner and comment author can do that.')
+        return redirect(reverse('blog_detail', args=[comment.blog.slug]))

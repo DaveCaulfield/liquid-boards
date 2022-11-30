@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% block extra_title %} - {{ store.location }} {% endblock %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'stores/css/stores.css' %}">
 {% endblock %}

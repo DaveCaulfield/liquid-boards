@@ -121,7 +121,7 @@ def add_review(request, product_id):
                 successfully added.')
             return redirect(
                             reverse('product_detail',
-                                    kwargs={"product_id": product.id})
+                                    kwargs={'product_id': product.id})
                             )
         else:
             messages.error(request, 'There is an error. Please try again.')
@@ -155,11 +155,11 @@ def edit_review(request, review_id):
     else:
         form = ReviewForm(instance=review)
 
-    template = "products/edit_review.html"
+    template = 'products/edit_review.html'
     context = {
-        "form": form,
-        "review": review,
-        "product": review.product,
+        'form': form,
+        'review': review,
+        'product': review.product,
     }
 
     return render(request, template, context)
@@ -174,13 +174,13 @@ def delete_review(request, review_id):
 
     if request.user == review.author.user or request.user.is_superuser:
         review.delete()
-        messages.info(request, "Review deleted!")
-        return redirect(reverse("product_detail", args=[review.product.id]))
+        messages.info(request, 'Review deleted!')
+        return redirect(reverse('product_detail', args=[review.product.id]))
     else:
         messages.error(
             request,
-            "Only shop owner and reviewer can do that.")
-        return redirect(reverse("product_detail", args=[review.product.id]))
+            'Only shop owner and reviewer can do that.')
+        return redirect(reverse('product_detail', args=[review.product.id]))
 
 
 @login_required
