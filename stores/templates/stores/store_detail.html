@@ -25,31 +25,24 @@
         <div class="col  mb-4 mt-3">
             <div class="card-body mt-2">
 
-                <!-- Display store image -->
-                <div class="img_container bg-black mb-5">
+                <!-- Display store logo image -->
+                <div class="img_container bg-black mb-5" role="img" aria-label="image of Liquid Boards Local Skateshop logo - sunset text on black background">
                     {% if "logo_placeholder" in stores.logo_image.url %}
                     <img class="card-logo_store_details"
                     src="{{ MEDIA_URL }}noimage.png"
-                    
-                        alt="default image for store">
+                    alt="default logo for store - sunset text on black background">
                     {% else %}
-                    <img class="card-logo_store_details" src=" {{ store.logo_image.url }}" alt="default logo for store" alt="default image of store">
+                    <img class="card-logo_store_details" src=" {{ store.logo_image.url }}"  alt="image for shop logo-  sunset text on black background">
                     {% endif %}
                 </div>
                 <div class="card-text text-grey text-center col-lg-6 offset-lg-3">
                     <p class="pt-5 mt-5"> {{ store.about }}</p>
 
-                </div>
-
-                
+                </div>        
                 
             </div>
         </div>
     </div>
-
-
-
-
 
     <h3 class=" reviews-header text-center text-muted"> Meet the Team</h3>
 
@@ -61,7 +54,7 @@
         <div class="card-body">
             <div class="row">
             <!-- Display staff image -->
-                <div class="staff_img_detail w-100 h-100 mt-3">
+                <div class="staff_img_detail w-100 h-100 mt-3" role="img" aria-label="image for liquid boards local shop staff">
                     {% if "staff_placeholder" in staff.staff_photo.url %}
                     <img class="card-staff_img_detail "
                     src="{{ MEDIA_URL }}noimage.png" 
@@ -114,9 +107,9 @@
                 <!-- Display Store address -->
                 <div class="card-text text-muted text-center col-lg-4 offset-lg-4">
 
-                    <p class="pt-4 font-weight-bold"> Local Shop Contact</p>
+                    <p class="pt-4 font-weight-bold">Contact {{ store.name }}</p>
 
-                    <p class="pt-5"> {{ address.street_address1 }}</p>
+                    <p class="pt-3"> {{ address.street_address1 }}</p>
                     <p> {{ address.town_or_city }}</p>
                     <p> {{ address.county }}</p>
                     <p> {{ address.country }}</p>

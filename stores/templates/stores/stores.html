@@ -28,16 +28,25 @@
                             <div class="card mb-4">
                                 <div class="card-body bg-black">
                                     <a href="{% url 'store_detail' store.id %}" class="blog-link">
-                                        <div class="image-container">
+                                        <div class="image-container" role="img" aria-label="image for liquid boards local shop">
+
+
+                                            {% if store.logo_image %}
+                                            <img class="card-img-top" src="{{ store.logo_image.url }}"       
+                                                alt="liquid boards logo sunset-text on black background">
+                                            {% else %}
+                                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="liquid boards logo sunset-text on black background">
+                                            {% endif %}
 
                                         
-                                            {% if "logo_placeholder" in store.logo_image.url %}
+                                            <!-- {% if "logo_placeholder" in store.logo_image.url %}
                                             <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png"
                                                 alt="default logo for store">
                                             {% else %}
                                             <img class="card-img-top" src=" {{ store.logo_image.url }}"
                                                 alt="image logo for store">
-                                            {% endif %}
+                                            {% endif %} -->
 
                                             {% if "placeholder" in store.store_image.url %}
                                                 <img class="card-img-bottom pb-1" src="{{ MEDIA_URL }}noimage.png"
@@ -48,6 +57,8 @@
                                             {% endif %}
                                             <div class="image-flash">
                                             </div>
+
+                                            
                                         </div>
                                     </a>
                                 </div>

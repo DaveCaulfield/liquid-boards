@@ -74,6 +74,10 @@ a:active { text-decoration: none; }
 }
 
 
+.about-tagline {
+  font-size: 1.2rem;
+}
+
 
 /* 
 store details page */
