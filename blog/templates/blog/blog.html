@@ -27,11 +27,11 @@
                 <div class="row">
                     {% for blog in blog_list %}
                     <div class=" col-xl-4">
-
+                        <a href="{% url 'blog_detail' blog.slug %}" class="blog-link">
                         <div class="card-deck">
                             <div class="card mb-4">
                                 <div class="card-body blog-card">
-                                    <a href="{% url 'blog_detail' blog.slug %}" class="blog-link">
+                                    <!-- <a href="{% url 'blog_detail' blog.slug %}" class="blog-link"> -->
                                         <div class="image-container">
                                             {% if "placeholder" in blog.blog_image.url %}
                                             <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png"
@@ -43,7 +43,7 @@
                                             <div class="image-flash">
 
                                                 <h4 class="post-title pt-2 ">{{ blog.title }}</h4>
-                                    </a>
+                                    <!-- </a> -->
                                     <p class="card-text text-muted pb-1">by {{ blog.author }},
                                         {{ blog.created_on | date:"j F Y" }}</p>
                                     <hr class="text-grey w-75 mx-auto pb-3">
@@ -56,8 +56,12 @@
                                 <span class="text-silver ">{{ blog.number_of_likes }}</span>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
+            </a>
+            
             </div>
             {% if forloop.counter|divisibleby:3 %}
         </div>
