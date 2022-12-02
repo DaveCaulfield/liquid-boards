@@ -3,13 +3,12 @@ from .widgets import CustomClearableFileInput
 from .models import Product, Category, Review
 
 
-
 class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
         fields = '__all__'
-    
+
     image = forms.ImageField(label='Image',
                              required=False,
                              widget=CustomClearableFileInput)
@@ -21,7 +20,7 @@ class ProductForm(forms.ModelForm):
 
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'      
+            field.widget.attrs['class'] = 'border-black rounded-0'
 
 
 class ReviewForm(forms.ModelForm):
@@ -31,5 +30,3 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = ('body',)
-
-

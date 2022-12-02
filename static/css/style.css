@@ -16,7 +16,6 @@ html {
     
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
-    /* width: 90%; */
 }
 
 
@@ -344,7 +343,7 @@ input[name='q']::placeholder {
 
 
 /* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
+@media (max-width: 1100px) {
   .header-container {
       padding-top: 100px;
   }

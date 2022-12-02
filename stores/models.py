@@ -51,13 +51,17 @@ class Staff(models.Model):
     """
     first_name = models.CharField(max_length=200, null=False, blank=False)
     surname = models.CharField(max_length=200, null=False, blank=False)
-    store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name='staff')
+    store = models.ForeignKey(
+        Store, on_delete=models.CASCADE, related_name='staff'
+        )
     staff_image_url = models.URLField(max_length=1024, null=True, blank=True)
     staff_image = models.ImageField(null=True, blank=True)
     job_title = models.CharField(max_length=200, null=False, blank=False)
     bio = models.TextField(blank=True)
     start_date = models.DateField(null=False, blank=False)
-    staff_number = models.CharField(max_length=6, unique=True, null=False, blank=False)
+    staff_number = models.CharField(
+        max_length=6, unique=True, null=False, blank=False
+        )
 
     def __str__(self):
         """
