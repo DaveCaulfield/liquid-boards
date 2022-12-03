@@ -6,4 +6,20 @@ Users are able to sign up to create their own personal account where they can sa
 
 View the live site here [Liquid Boards](https://https://liquid-boards.herokuapp.com//)
 
-![landing page](README/assets/landingpage.png)
+![landing page](README/assets/landingpage2.png)
+
+
+## Design
+
+### User Experience (UX)
+- The user experience (UX) and user interface (UI) was considered from the start of the design process. 
+- The site aims to give the user an enjoyable experience whilst easily and intuitively navigating and interacting with the site on mobile, tablet, laptop or desktop devices.
+
+### Colour scheme
+
+- Adobe colour was used to extract the warm sunset colour #F2913D from the landing page image and was chosen as the color for the site logo, call to action button on the homepage and was interspersed throughout the site.
+- A black background for the navbar frames each page of the site and gives a premium feel and helps to contrast the warm sunset coloring in the site.
+- Adobe colour was also used to extract #F2F2F2 from the landing page image and is used as a light background color for the body ofthe site pages throughout the site.
+- The footer is left clear and give an uncluttered feel to the site.
+
+![colour](README/assets/adobe.png)
