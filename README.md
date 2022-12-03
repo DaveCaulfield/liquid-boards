@@ -28,4 +28,4 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ### Wireframes
 
-- [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes for [mobile](wireframe_mobile.md), [tablet](wireframe_tablet.md) and [desktop](wireframe_desktop.md).
+- [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes for [mobile](README/wireframe_mobile.md) and [desktop](README/wireframe_desktop.md) devices.
