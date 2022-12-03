@@ -4,7 +4,7 @@ Liquid Boards is a website for a fictitious online skateshop. The site functions
 Users are able to sign up to create their own personal account where they can save their address/billing information for easier purchasing at checkout, post a review of a product or comment on a Blog.
 
 
-View the live site here [Liquid Boards](https://https://liquid-boards.herokuapp.com//)
+View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ![landing page](README/assets/landingpage2.png)
 
@@ -23,3 +23,9 @@ View the live site here [Liquid Boards](https://https://liquid-boards.herokuapp.
 - The footer is left clear and give an uncluttered feel to the site.
 
 ![colour](README/assets/adobe.png)
+
+[Back to top](#Liquid-Boards)
+
+### Wireframes
+
+- [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes for [mobile](wireframe_mobile.md), [tablet](wireframe_tablet.md) and [desktop](wireframe_desktop.md).
