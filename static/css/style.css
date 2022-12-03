@@ -307,13 +307,9 @@ input[name='q']::placeholder {
 
 /* --------------about page----- */
 
-
-
 .about-tagline {
   font-size: 1.2rem;
 }
-
-
 
 /* -------------------------------- Media Queries */
 
@@ -325,7 +321,7 @@ input[name='q']::placeholder {
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
   .fixed-top-desktop-only {
       position: fixed;
       top: 0;
