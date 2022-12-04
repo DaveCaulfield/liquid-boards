@@ -1,4 +1,4 @@
-### Desktop
+## Desktop
 
 ### Home page
 ![Wireframe](wireframe/desktop_homepage.png)
@@ -22,5 +22,7 @@
 ### Blog
 ![Wireframe](wireframe/desktop_blog.png)
 
+[Back to top](##Desktop)
 
-Back to [README.md](README.md)
+
+Back to [README.md](/README.md)

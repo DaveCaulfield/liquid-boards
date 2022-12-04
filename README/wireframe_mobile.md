@@ -10,7 +10,7 @@
 -  ![Wireframe](wireframe/mobile_online_shop.png)
 
 ### Product Details
--  ![Wireframe](wireframe/mobile_product_details.png)
+-  ![Wireframe](wireframe/mobile_product_detail.png)
 
 ### Shopping Cart
 -  ![Wireframe](wireframe/mobile_shopping_cart.png)
@@ -28,4 +28,4 @@
 -  ![Wireframe](wireframe/mobile_blog_details.png)
 
 
-Back to [README.md](README.md)
+Back to [README.md](/README.md)

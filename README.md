@@ -19,8 +19,8 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 - Adobe colour was used to extract the warm sunset colour #F2913D from the landing page image and was chosen as the color for the site logo, call to action button on the homepage and was interspersed throughout the site.
 - A black background for the navbar frames each page of the site and gives a premium feel and helps to contrast the warm sunset coloring in the site.
-- Adobe colour was also used to extract #F2F2F2 from the landing page image and is used as a light background color for the body ofthe site pages throughout the site.
-- The footer is left clear and give an uncluttered feel to the site.
+- Adobe colour was also used to extract #F2F2F2 from the landing page image and is used as a light background color for the body of pages throughout the site.
+
 
 ![colour](README/assets/adobe.png)
 
@@ -29,3 +29,14 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ### Wireframes
 
 - [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes for [mobile](README/wireframe_mobile.md) and [desktop](README/wireframe_desktop.md) devices.
+
+
+
+
+## Features
+
+### The Nav Bar
+- The navbar sits at the top each page with a black background and grey text 
+    - A first time vistor or a user that has not signed into the site - Visitor navbar
+    - A site member who has signed in - Members navbar
+    - an admin user who has signed in - Admin navbar

@@ -5,19 +5,16 @@ html {
 }
   
   body {
-  /* background-color: black;  */
+  background-color: black; 
   height:calc(100vh - 164px);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 100px;
 }
 
-
-#mc_embed_signup {
-    
+#mc_embed_signup {   
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
 }
-
 
 .shop-name {
   color: #F2913D;
@@ -73,7 +70,6 @@ h2 {
   font-size: 1.2rem;
   color: silver;
 }
-
 
 a.category-badge > span.badge:hover {
   background: #212529 !important;
