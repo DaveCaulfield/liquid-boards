@@ -76,3 +76,13 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ![landing mobile](README/assets/features/mobile_landing_page.png) 
 
+
+### The footer
+
+![footer](README/assets/features/footer.png) 
+
+- The footer is styled with silver text on black backround and sits at the bottom of each page.
+- There is a newsletter sign up feature located in the footer.
+- The companies social media icon links are in the same color and style as the rest of the site. 
+- The icon color changes to silver to grey when hovered on.
+
