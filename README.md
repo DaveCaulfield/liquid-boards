@@ -79,10 +79,62 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ### The footer
 
-![footer](README/assets/features/footer.png) 
+![Footer](README/assets/features/footer.png) 
 
 - The footer is styled with silver text on black backround and sits at the bottom of each page.
 - There is a newsletter sign up feature located in the footer.
 - The companies social media icon links are in the same color and style as the rest of the site. 
 - The icon color changes to silver to grey when hovered on.
 
+
+### About Page
+
+![About page](README/assets/features/about.png) 
+
+- The About page gives clear messaging to the user about Liquid Boards.
+- A strong tagline communicates to the user that Liquid Boards is both an online and local skateshop which is valued in the skate community.
+- A brand logo sits at the top of the page on large screens and is removed for mobile screens.
+
+
+### Online Shop
+
+![Online Shop](README/assets/features/online_shop_page.png) 
+
+- The products in the online shop are cleanly displayed to the user.
+- The page has a light background color and white background on the product cards.
+- This allows users to easily see the product image, product name, price, category.
+- A search feature is available to the user to search for products on the site.
+- A sorting feature allows the user to sort the displayed products. 
+- Users can also easily navigate to the different categories within the online shop from the navbar
+
+![Online shop Links](README/assets/onlineshop.png)
+
+![Mobile Online shop Links](README/assets/features/mobile_online_shop_categories.png) 
+
+### Product Detail Page
+
+![Product Details Page](README/assets/features/product_detail_page.png) 
+
+- The product details page clearly displays the product details to the user.
+- A Keeping shooping option and an Add to Bag option are easily available to the user.
+- The layout, styling and functionality of the page lead to a great UX and UI experience for the user.
+
+### Product Reviews
+
+![Product Reviews](README/assets/features/reviews.png) 
+
+- A clean and simple review page is dispalyed below the product details.
+- All user of the site can read the reviews which helps potential buyers.
+- A user must have account to write a review.
+- A user can edit or delete their own reviews if needed.
+- An admin user can edit or delete all users reviews if needed.
+
+### Review Form
+![Review form](README/assets/features/review_form.png) 
+- If a user is signed into their account a review form is displayed for them to easily add review.
+- A signed in user will also see an Edit & Delete option for any of their posted reviews.
+
+### Edit Review Form
+![Edit Review form](README/assets/features/edit_review.png) 
+- A signed in user can easily Edit any of their posted reviews.
+- A signed in user can easily Delete any of their posted reviews by selecting the Delete button.
