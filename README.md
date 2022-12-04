@@ -36,7 +36,25 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ## Features
 
 ### The Nav Bar
-- The navbar sits at the top each page with a black background and grey text 
-    - A first time vistor or a user that has not signed into the site - Visitor navbar
-    - A site member who has signed in - Members navbar
-    - an admin user who has signed in - Admin navbar
+- The navbar sits at the top each page with a black background and silver text. 
+- The nav link text changes to sunset orange #F2913D when hovered on.
+- The Liquid Boards Logo is displayed in the navbar and is a link back to the homepage.
+- The shopping bag icon changes color to sunset orange #F2913D if an item has been added.
+- The layout and styling give a warm and premium feel to the user experience and allows the user to easily navigate the site.
+
+
+### Desktop Navbar
+![Desktop Navbar](README/assets/navbar_desktop.png)
+
+
+![Onlineshop Links](README/assets/onlineshop.png)
+- There are dropdown links for the Online Shop menu allowing user to easily access the different categories of products available.
+
+![Local Shop Links](README/assets/local_shops.png)
+- There are dropdown links for the Local Shops menu allowing user to easily access the different Local Shops available.
+
+
+### Mobile Navbar
+![Mobile Navbar](README/assets/navbar_mobile.png)
+- The navbar is fully responsive and collapses to a hamburger dropdown menu on smaller tablet and mobile screens.
+
