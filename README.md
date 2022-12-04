@@ -138,3 +138,29 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ![Edit Review form](README/assets/features/edit_review.png) 
 - A signed in user can easily Edit any of their posted reviews.
 - A signed in user can easily Delete any of their posted reviews by selecting the Delete button.
+
+### Local Shops
+
+![Local Shops](README/assets/features/all_shops.png) 
+
+- The Local Shops page displays each of the three Liquid Boards shops located in Dublin, New York and New Zealand.
+
+
+### Local Shop Details
+
+![Shop Details](README/assets/features/shop_details1.png) 
+- The Shop Details page displays a paragraph about the shop.
+
+### Meet the Team
+
+![Shop Details](README/assets/features/shop_details2.png)
+
+- The Meet the Team section introduces the user to the shops staff.
+- A photo and bio is displayed for each meber of staff.
+
+
+### Shop Address/Contact
+
+![Shop Details](README/assets/features/shop_details3.png)
+
+- The local shop contact details are displayed at the bottom of the page.
