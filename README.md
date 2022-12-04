@@ -58,3 +58,21 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ![Mobile Navbar](README/assets/navbar_mobile.png)
 - The navbar is fully responsive and collapses to a hamburger dropdown menu on smaller tablet and mobile screens.
 
+
+
+### The landing page
+
+![landing page1](README/assets/features/landing_page.jpg) 
+
+- The landing page contains a hero image of a person skatboarding at sunset. 
+- The image is warm, inviting and inspiriing to the target audience.
+- The main colour in the image is a warm sunset orange, this colour is contrasted with the shadowy silhouette of palm trees and people.
+- The hero image is also framed with a black background navbar and footer.
+- A call to action "shop now" button is styled with a black background and the same warm sunset orange color for test and shadow effect.
+- The shop now button brings the user into the sites online shop.
+- The coloring and style effects of the landing page are continued throughout the site giving the user a consistent and intuitive user experience.
+- The landing page is responsive for mobile devices.
+
+
+![landing mobile](README/assets/features/mobile_landing_page.png) 
+
