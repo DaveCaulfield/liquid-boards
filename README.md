@@ -164,3 +164,41 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ![Shop Details](README/assets/features/shop_details3.png)
 
 - The local shop contact details are displayed at the bottom of the page.
+
+
+### Blog
+
+![Blog](README/assets/features/blog.png)
+
+- The site has a blog section allowing the Liquid Board admins to post.
+- The site/shop admins can post blog posts from the application backend.
+- The blog posts are clearly displayed for the user with a blog image, title, author and excerpt displayed.
+- A user that is signed in can like a blog post.
+- The Blog styling is consitent with the rest of the sites color scheme and layout which gives a good user experience.
+
+### Blog Post
+![Blog post](README/assets/features/blogpost1.png)
+![Blog post](README/assets/features/blogpost2.png)
+
+- A Blog Post page displays the blogs image, title, author and the blog content.
+- A thumbs up icon is displayed allowing the user to click/toggle to like the post.
+- A chat icon is also displayed with a count of the number of comments the blog has received.
+
+### Blog Comments
+
+![Blog comments](README/assets/features/blog_comments.png)
+
+- Blog comments are displayed below the blog post.
+
+
+### Blog Comment form
+
+![Blog comments](README/assets/features/blog_comment_form.png)
+
+- A signed in user can add a comment to the blog post by entering text into the comment form and pressing the submit button.
+
+### Edit Blog Comment
+
+![Blog comments](README/assets/features/edit_blog_comment.png)
+
+- A signed in user can edit or delete their own comment.
