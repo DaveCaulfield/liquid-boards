@@ -78,7 +78,7 @@
                         <form class="d-inline" action="{% url 'blog_like' blog.slug %}" method="POST">
                             {% csrf_token %}
                         </form>
-                            {% endif %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -94,9 +94,8 @@
                 <div class="comments text-muted mt-4 " style="padding: 25px;">
 
                     <!-- The body of the comment goes before the | -->
-                    <p class="text-black">   
-                            {{ comment.body | linebreaks }}
-                    </p>
+
+                    {{ comment.body | linebreaks }}
 
                     <p>
                         <span class=" text-muted ">
@@ -119,8 +118,6 @@
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
-
-            <!-- <div class="card-body "> -->
 
             {% if user.is_authenticated %}
             <div class="card-body ">
