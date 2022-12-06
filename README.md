@@ -32,7 +32,6 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 
 
-
 ## Features
 
 ### The Nav Bar
@@ -46,7 +45,6 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ### Desktop Navbar
 ![Desktop Navbar](README/assets/navbar_desktop.png)
 
-
 ![Onlineshop Links](README/assets/onlineshop.png)
 - There are dropdown links for the Online Shop menu allowing user to easily access the different categories of products available.
 
@@ -57,7 +55,6 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ### Mobile Navbar
 ![Mobile Navbar](README/assets/navbar_mobile.png)
 - The navbar is fully responsive and collapses to a hamburger dropdown menu on smaller tablet and mobile screens.
-
 
 
 ### The landing page
@@ -119,6 +116,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 - A Keeping shooping option and an Add to Bag option are easily available to the user.
 - The layout, styling and functionality of the page lead to a great UX and UI experience for the user.
 
+
 ### Product Reviews
 
 ![Product Reviews](README/assets/features/reviews.png) 
@@ -129,15 +127,18 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 - A user can edit or delete their own reviews if needed.
 - An admin user can edit or delete all users reviews if needed.
 
+
 ### Review Form
 ![Review form](README/assets/features/review_form.png) 
 - If a user is signed into their account a review form is displayed for them to easily add review.
 - A signed in user will also see an Edit & Delete option for any of their posted reviews.
 
+
 ### Edit Review Form
 ![Edit Review form](README/assets/features/edit_review.png) 
 - A signed in user can easily Edit any of their posted reviews.
 - A signed in user can easily Delete any of their posted reviews by selecting the Delete button.
+
 
 ### Local Shops
 
@@ -150,6 +151,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ![Shop Details](README/assets/features/shop_details1.png) 
 - The Shop Details page displays a paragraph about the shop.
+
 
 ### Meet the Team
 
@@ -176,19 +178,22 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 - A user that is signed in can like a blog post.
 - The Blog styling is consitent with the rest of the sites color scheme and layout which gives a good user experience.
 
+
 ### Blog Post
-![Blog post](README/assets/features/blogpost1.png)
+![Blog post](README/assets/features/blogpost1crop.jpg)
 ![Blog post](README/assets/features/blogpost2.png)
 
 - A Blog Post page displays the blogs image, title, author and the blog content.
 - A thumbs up icon is displayed allowing the user to click/toggle to like the post.
 - A chat icon is also displayed with a count of the number of comments the blog has received.
 
+
 ### Blog Comments
 
 ![Blog comments](README/assets/features/blog_comments.png)
 
 - Blog comments are displayed below the blog post.
+- A success message is displayed to the user when they have successfully submited a comment.
 
 
 ### Blog Comment form
@@ -197,8 +202,116 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 - A signed in user can add a comment to the blog post by entering text into the comment form and pressing the submit button.
 
+
 ### Edit Blog Comment
 
 ![Blog comments](README/assets/features/edit_blog_comment.png)
 
 - A signed in user can edit or delete their own comment.
+
+[Back to top](#Liquid-Boards)
+
+
+## Future Features
+
+## Data Model
+
+## User Stories
+
+As a site visitor 
+- I can navigate the site easily and intuitively so that I can easily find my way around the site.
+- I can view a display of the products so that I can easily see and select from the displayed products.
+- I can view a category of products so that I can easily see a type of product that I am interested in.
+- I can view an individual product so that I can see the product details.
+- I can easily see the total price of my shopping cart so that I can watch out for how much I'm spending.
+- I can see reviews left for products so that I can see other peoples thoughts and experiences of products.
+- I can create an account so that I can save my details for an easier shopping experience.
+- I can login to my account so that I can view/edit my account information.
+- I can have a personalized profile so that I can view my order history and save billing information.
+- I can reset my password so that I can access my account.
+- I can search products so that I can easily find products I'm interested in.
+- I can view and sort search results so that I can easily organize my search results.
+- I can sort a category of product so that I can easily sort items by price or brand.
+- I can add an item to my shopping cart so that I can purchase an item.
+- I can select the quantity of an item to purchase so that I can adjust the amount of items I would like.
+- I can view the items in my shopping bag so that I can view the no of items and total cost.
+- I can add my payment details so that I make a purchase easily.
+- I can view my order so that I can ensure there are no mistakes with the order.
+- I can get confirmation of my purchase so that I can keep record of my purchases
+- I can leave a review of a product I purchased so that I can help others with deciding on their purchase.
+- I can edit my product reviews so that I can make edits to my reviews if required.
+- I can delete my product reviews so that I can remove my reviews if required.
+- I can add, edit and delete my own blog comments so that I can engage with the sites blog.
+
+
+
+As a site Admin
+- I can add a product so that I can add items to the online shop.
+- I can edit a product so that I can update item details.
+- I can delete a product so that I can remove items from the shop.
+- I can add a shop to the site so that I can add any new shops that come on board or are opened.
+- I can edit a shops details so that I can make edits if required.
+- I can delete a shop from the site so that I can remove a shop if needed.
+- I can add, edit delete staff so that I can update staff details as required.
+- I can upload, edit and delete Blog Posts so that I can upload and manage blog posts.
+
+
+## Agile Develeopment
+
+- Agile methodology was used to manage the developmenet of this project by breaking down the requirements and features for the site into user stories. 
+- Acceptance criterias were assingned to each of the user stories.
+- A list of software development tasks required to complete the user story objective and meet the acceptence criteria formed the steps of development to be carried out.
+
+![user-story](README/assets/user_stories.png)
+
+- Githubs project kanban feature was used for easy tracking of user stories.
+- A template was created for adding the user stories which populated them as issue into the To Do column of the kanban board.
+- Epics were created to group the user stories into categories.
+- Acceptence criteria was defined for each user story.
+- User stories were moved into the In Progress column while being worked on.
+- Once all tasks belonging to a user story were completed and the acceptence criteria was met the user story was moved into the Done Column.
+
+![user-story](README/assets/kanban.png)
+
+[Back to top](#Liquid-Boards)
+
+
+## Testing
+
+Please see the [testing](testing.md) page for details of site testing. 
+
+
+ ## Technologies Used
+
+### Languages
+  - python - used to develop the backend of the site.
+  - HTML - used to structure webpage layout of website.
+  - CSS - used to style webpages.
+
+### Frameworks
+ - Django Python Framework - used to create the backend structure for the site.
+ - Bootstrap - used to style the website, add responsiveness and interactivity.
+ - Django-allauth - used for account authentication.
+
+
+### Database
+- PostgreSQL - used as the deployed sites database.
+
+
+### Other Technologies
+- AWS - used for media hosting service
+- Git- used for version control 
+- GitHub - used for hosting the code repository
+- Heroku - used as the cloud based deployment platform
+- Balsamiq - used to create the wireframes
+- Chrome DevTools - used for inspecting and debugging the site
+- Font Awesome - used to source icons
+- Github Projects - used to track user stories progress through the project
+- Favicon.io - used for the favicon
+- Adode Color - used for the color theme
+- Google Sheets - for the database model tables and manual testing
+
+[Back to top](#Liquid-Boards)
+
+
+ ## Deployment
