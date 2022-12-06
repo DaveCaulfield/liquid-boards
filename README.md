@@ -216,6 +216,8 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ## Data Model
 
+![Database Schema](README/assets/schema.png)
+
 ## User Stories
 
 As a site visitor 
