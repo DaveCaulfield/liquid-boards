@@ -218,6 +218,20 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ![Database Schema](README/assets/schema.png)
 
+## Epics
+
+[EPIC 1: Viewing and navigation](https://github.com/DaveCaulfield/liquid-boards/issues/26)
+
+[EPIC 2: Account Registration & Login](https://github.com/DaveCaulfield/liquid-boards/issues/27)
+
+[EPIC 3: Search & Sort products ](https://github.com/DaveCaulfield/liquid-boards/issues/28)
+
+[EPIC 4: Purchasing & Checkout](https://github.com/DaveCaulfield/liquid-boards/issues/29)
+
+[EPIC 5: Site Administration](https://github.com/DaveCaulfield/liquid-boards/issues/30)
+
+[EPIC 6: Engaging with the community](https://github.com/DaveCaulfield/liquid-boards/issues/32)
+
 ## User Stories
 
 As a site visitor 
