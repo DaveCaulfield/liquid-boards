@@ -1,6 +1,5 @@
 from django.contrib import admin
 from .models import Store, StoreAddress, Staff, StaffAddress
-from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(Store)
