@@ -8,7 +8,7 @@ class StoreList(generic.ListView):
     display list of all stores
     """
     model = Store
-    queryset = Store.objects.all()
+    queryset = Store.objects.all().order_by('name')
     template_name = 'stores/stores.html'
     paginate_by = 3
 
