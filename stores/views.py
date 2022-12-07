@@ -17,7 +17,7 @@ def store_detail(request, store_id):
     """
     View to return individual store detail page
     """
-    queryset = Store.objects
+    # queryset = Store.objects
     store = get_object_or_404(Store, pk=store_id)
     address = get_object_or_404(StoreAddress, pk=store)
     staff = store.staff.all()
