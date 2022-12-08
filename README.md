@@ -328,12 +328,24 @@ Please see the [testing](testing.md) page for details of site testing.
 ![Facebook Mockup](README/assets/facebook.png)
 
 
-### Newsletter
--XXXXXXXXXXXX
-
-
 ### SEO
--XXXXXXXXXXXX
+- A sitemap.xml and a robots.tx file have been created for the site.
+
+- The xml sitemap is a file that lists a website’s important page urls, making sure that search engines can crawl, or navigate, through them. 
+- It also helps search engines understand your website structure and ensures search engines will crawl every essential page on your website which helps with content discovery.
+
+- The robots.txt file is a simple text file that tells search engines where they are not allowed to go on a website. 
+- It lists out any folders  or files that will not be crawled or indexed by search engine spiders. 
+- Having a robots.txt file shows that you acknowledge that search engines are allowed on your site and that they may have free access to it.
+- Search engines take the existence of this  file in your projects as a sign of quality and so it improves your SEO ranking as a result. 
+
+### Keywords
+- Keyword research is the process of finding and analyzing search terms that people enter into search engines, with the goal of using that data for SEO or general web marketing.
+- Both Short-tail keywords and Long-tail phrases were researched for the target audience.
+- Keywords were tried out on Google and the autocomplete and relevant suggestions returned were helpful in narrowing down suitable keywords and long-tail phrases.
+
+- Semantic HTML best parctices were also followed throughout development sucha the the use of header, section, footer and image alt tags.
+- Semantic HTML tags are important for SEO because they indicate the role of the content within the tags. Pages with correctly implemented semantic HTML have an advantage in SEO over those that don’t. 
 
 
 
@@ -374,3 +386,10 @@ Please see the [testing](testing.md) page for details of site testing.
 
  -XXXXXXXXXXXX
  -XXXXXXXXXXXX
+
+
+ 
+ ## Credits
+
+## Acknowledgements
+
