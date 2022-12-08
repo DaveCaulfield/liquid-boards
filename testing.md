@@ -52,3 +52,19 @@
 ### Lighthouse
 
 ![Lighthouse](README/assets/lighthouse.png)
+
+
+
+## Testing
+
+![Testing](README/assets/testing_1.png)
+
+![Testing](README/assets/testing_2.png)
+
+![Testing](README/assets/testing_3.png)
+
+![Testing](README/assets/testing_4.png)
+
+![Testing](README/assets/testing_5.png)
+
+![Testing](README/assets/testing_6.png)

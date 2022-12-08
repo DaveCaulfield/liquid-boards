@@ -251,7 +251,7 @@ As a site visitor
 - I can add an item to my shopping cart so that I can purchase an item.
 - I can select the quantity of an item to purchase so that I can adjust the amount of items I would like.
 - I can view the items in my shopping bag so that I can view the no of items and total cost.
-- I can add my payment details so that I make a purchase easily.
+- I can add my details so that I make a purchase easily.
 - I can view my order so that I can ensure there are no mistakes with the order.
 - I can get confirmation of my purchase so that I can keep record of my purchases
 - I can leave a review of a product I purchased so that I can help others with deciding on their purchase.
