@@ -181,6 +181,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ### Blog Post
 ![Blog post](README/assets/features/blogpost1crop.jpg)
+
 ![Blog post](README/assets/features/blogpost2.png)
 
 - A Blog Post page displays the blogs image, title, author and the blog content.
@@ -214,9 +215,19 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ## Future Features
 
+-XXXXXXXXXXXX
+
 ## Data Model
 
 ![Database Schema](README/assets/schema.png)
+
+
+
+## Agile Develeopment
+
+- Agile methodology was used to manage the developmenet of this project by breaking down the requirements and features for the site into Epics and related user stories. 
+- Acceptance criteria's were assingned to each of the user stories.
+- A list of software development tasks required to complete the user story objective and meet the acceptence criteria formed the steps of development to be carried out.
 
 ## Epics
 
@@ -260,7 +271,6 @@ As a site visitor
 - I can add, edit and delete my own blog comments so that I can engage with the sites blog.
 
 
-
 As a site Admin
 - I can add a product so that I can add items to the online shop.
 - I can edit a product so that I can update item details.
@@ -272,17 +282,11 @@ As a site Admin
 - I can upload, edit and delete Blog Posts so that I can upload and manage blog posts.
 
 
-## Agile Develeopment
-
-- Agile methodology was used to manage the developmenet of this project by breaking down the requirements and features for the site into user stories. 
-- Acceptance criterias were assingned to each of the user stories.
-- A list of software development tasks required to complete the user story objective and meet the acceptence criteria formed the steps of development to be carried out.
-
 ![user-story](README/assets/user_stories.png)
 
 - Githubs project kanban feature was used for easy tracking of user stories.
 - A template was created for adding the user stories which populated them as issue into the To Do column of the kanban board.
-- Epics were created to group the user stories into categories.
+- Epics were created grouping the user stories into categories.
 - Acceptence criteria was defined for each user story.
 - User stories were moved into the In Progress column while being worked on.
 - Once all tasks belonging to a user story were completed and the acceptence criteria was met the user story was moved into the Done Column.
@@ -296,8 +300,44 @@ As a site Admin
 
 Please see the [testing](testing.md) page for details of site testing. 
 
+## Business model
+- The Liquid Boards site is created as a B2C site, it's purpose is to sell skateboards and skate equipment and promote the local skateshops. 
+- The sites strategy is to create a skate community in which people feel welcomed and the site is trusted by the community. 
+- This helps create the site as the go to place for skateboards and helps create a sustainable repeat customer base.
+- The ways of implementing this strategy are listed below in the Web Marketing section.
 
- ## Technologies Used
+
+## Web Marketing
+- Web marketing is the process of marketing a business online, and it's a cost-effective way to reach people who are most interested in what your business has to offer. 
+- The site uses SEO and Content Marketing to helps create the community.
+
+
+### Content Marketing
+- Content marketing is the process of consistently creating, distributing and promoting relevant online materials in a way that is strategically designed to attract, engage and convert your target market into customers. 
+
+### Blog
+- The site has a Blog feature which the shop owners can upload relevant and interesting blogposts to. 
+- There is a comments are for users to add comments which creates further engagement with the community.
+
+### Newsletter
+- The site has a Newsletter feature allowing users to signup to keep updated on any offers.
+
+### Facebook
+- The site is a fictitious site so a Facebook mockup has been created to show the social media strategy.
+
+![Facebook Mockup](README/assets/facebook.png)
+
+
+### Newsletter
+-XXXXXXXXXXXX
+
+
+### SEO
+-XXXXXXXXXXXX
+
+
+
+## Technologies Used
 
 ### Languages
   - python - used to develop the backend of the site.
@@ -331,3 +371,6 @@ Please see the [testing](testing.md) page for details of site testing.
 
 
  ## Deployment
+
+ -XXXXXXXXXXXX
+ -XXXXXXXXXXXX

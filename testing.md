@@ -29,33 +29,10 @@
 - there is also a js script from mailchimp for the sites newsletter that showed up some warnings.
 
 
+Back to [README.md](README.md)
 
 
-[EPIC 1: Viewing and navigation](https://github.com/DaveCaulfield/liquid-boards/issues/26)
-
-[EPIC 2: Account Registration & Login](https://github.com/DaveCaulfield/liquid-boards/issues/27)
-
-[EPIC 3: Search & Sort products ](https://github.com/DaveCaulfield/liquid-boards/issues/28)
-
-[EPIC 4: Purchasing & Checkout](https://github.com/DaveCaulfield/liquid-boards/issues/29)
-
-[EPIC 5: Site Administration](https://github.com/DaveCaulfield/liquid-boards/issues/30)
-
-[EPIC 6: Engaging with the community](https://github.com/DaveCaulfield/liquid-boards/issues/32)
-
-
-
-
-
-
-
-### Lighthouse
-
-![Lighthouse](README/assets/lighthouse.png)
-
-
-
-## Testing
+## Manual Testing
 
 ![Testing](README/assets/testing_1.png)
 
@@ -68,3 +45,33 @@
 ![Testing](README/assets/testing_5.png)
 
 ![Testing](README/assets/testing_6.png)
+
+
+## Responsiveness Testing
+- Responsivness was tested using [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) and [Responsive design checker](https://responsivedesignchecker.com/). 
+    - Devices tested using these tools were Moto G4, Galaxy S5, iPhone5, iPhone6/7 iPad, iPad pro, Display < 1200px, Display > 1200px
+- Physical devices used in testing were iPhone11, iPad, Laptop and extra large monitor.
+
+## Browser Compatability
+- The site was tested using Google Chrome, Microsoft Edge, Mozilla Firefox and Safari web browsers. 
+- Testing checked for:
+    - Rendering/Appearance
+    - Responsiveness
+    - Functionality 
+
+Back to [README.md](README.md)
+
+
+### Lighthouse
+
+
+- [lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the site for performance, accessibility, best bractices and SEO.
+
+    - Performance - How fast it takes a webpage to load.
+    - Accessibility - How accessible a website is (users might need a screen reader).
+    - Best Practices - How the site conforms to coding best practices.
+    - SEO - Search engine optimisation. How optimised the site is for search engine results.
+
+![Lighthouse](README/assets/lighthouse.png)
+
+Back to [README.md](README.md)
