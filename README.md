@@ -346,6 +346,7 @@ Please see the [testing](testing.md) page for details of site testing.
 
 - Semantic HTML best parctices were also followed throughout development sucha the the use of header, section, footer and image alt tags.
 - Semantic HTML tags are important for SEO because they indicate the role of the content within the tags. Pages with correctly implemented semantic HTML have an advantage in SEO over those that don’t. 
+- Rel attributes noopener and noreferrer were also used on any links opening external sites.
 
 
 
@@ -384,8 +385,61 @@ Please see the [testing](testing.md) page for details of site testing.
 
  ## Deployment
 
- -XXXXXXXXXXXX
- -XXXXXXXXXXXX
+## Deployment
+ The site was deployed using the Heroku platform.
+
+ The following steps were taken to deploy the site:
+
+ - Log into your Heroku account.
+ - From the home dashboard, click on "New" then "Create new app".
+ - Enter the "App name" and "Choose a region" before clicking on "Create app".
+ - In your apps Resources tab and add a Heroku Postgres database.
+ - Go to "Config Vars" under the "Settings" tab.
+ - Click on "Reveals Config Vars" and enter:
+
+   - DATABASE_URL = add url of postgres database
+   - PORT = 8000
+   - SECRET_KEY = secret key for app
+   - DISABLE_COLLECTSTATIC = 1 for development. Needs to be removed when deploying to production
+ - Go to the Deploy tab and for deployment method select Github and click on "Connect to GitHub"
+ - Search for the repository name and click connect
+ - Go to the bottom of the deploy page and select preferred deployment type:
+ - Choose "Automatic deploys" or "Manual deploys" to deploy the application
+
+ - In Django:
+ - Create a procfile. 
+ - In settings.py make sure DEBUG is False and add Heroku to ALLOWED_HOSTS
+ - create an environment env.py file with database url and secret keys also add Stripe and AWS secret keys for production.
+
+
+ ### Local Environment
+
+ - Create a workspace on your local IDE or use gitpods cloud based virtual enviroment.
+ - Create an env.py file with variables for database url, secret key, media storage url
+ - follow the steps above for setting up heroku.
+
+
+
+
+ 
+
+
+ ## Cloning
+ To clone the repository:
+ - Go to the sites main page in Github.
+ - Select the Code drop down button (beside the green gitpod button)
+ - Go to the GitHub CLI tab and click on the copy icon
+ - Open a bash terminal
+ - Change the current working directory to the desired destination location.
+ - Type 'git clone' and paste in the copied URL
+ - Press enter to create the local clone
+ 
+ An environment env.py file must also be created. env.py files are not stored in GitHub so are not included with the cloned files.
+ 
+  ## Forking
+
+  To fork the project go to the main repository page. At the top right of the page, click the Fork icon. A forked copy of the repository will appear in your Repositories page.
+
 
 
  
