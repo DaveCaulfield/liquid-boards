@@ -62,6 +62,21 @@ Back to [README.md](README.md)
 Back to [README.md](README.md)
 
 
+## Bugs & Issues
+
+### User profile details not saving
+- I had an issue trying to implement the "save info box" on my checkout page  - the user profile details did not save to the profile.
+- The issue was found in the Profile view.
+
+![save_profile_bug](README/assets/save_profile1.png)
+
+- Instead of getting the saved instance of the form with the saved details the my code was also getting the request Method of the form.
+
+![save_profile_bug](README/assets/save_profile2.png)
+
+- request.POST was removed from the line of code and the save profile details feature worked.
+
+
 ### Lighthouse
 
 

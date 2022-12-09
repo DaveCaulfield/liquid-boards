@@ -26,7 +26,7 @@
     + [Edit Blog Comment](#edit-blog-comment)
   * [Future Features](#future-features)
   * [Data Model](#data-model)
-  * [Agile Develeopment](#agile-develeopment)
+  * [Agile Development](#agile-development)
   * [Epics](#epics)
   * [User Stories](#user-stories)
   * [Testing](#testing)
@@ -269,7 +269,10 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ## Future Features
 
--XXXXXXXXXXXX
+- Sign in with a Social Media account.
+- A wishlist feature to help user track products they would like to purchase.
+- A stock management feature.
+- A frontend admin feature for the sites blog.
 
 ## Data Model
 
@@ -277,7 +280,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 
 
-## Agile Develeopment
+## Agile Development
 
 - Agile methodology was used to manage the developmenet of this project by breaking down the requirements and features for the site into Epics and related user stories. 
 - Acceptance criteria's were assingned to each of the user stories.
@@ -352,7 +355,8 @@ As a site Admin
 
 ## Testing
 
-Please see the [testing](testing.md) page for details of site testing. 
+Please see the [Testing](testing.md) page for details of site testing. 
+
 
 ## Business model
 - The Liquid Boards site is created as a B2C site, it's purpose is to sell skateboards and skate equipment and promote the local skateshops. 
@@ -436,8 +440,6 @@ Please see the [testing](testing.md) page for details of site testing.
 
 [Back to top](#Liquid-Boards)
 
-
- ## Deployment
 
 ## Deployment
  The site was deployed using the Heroku platform.
