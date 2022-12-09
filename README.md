@@ -475,9 +475,95 @@ Please see the [Testing](testing.md) page for details of site testing.
  - follow the steps above for setting up heroku.
 
 
+### Stripe keys
+
+- To get Stripe keys log in to Stripeand go to the developers tab. 
+- On side menu you will find API keys. Copy STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY.
+
+- Go to Webhooks and Click Add Endpoint button in top right hand corner. 
+- Add endpoint URL (your local or deployed URL) Add all events, click add endpoint. You should be redirected to the webhook's page. 
+- Reveal webhook sign in secret and copy into Settings and Heroku config vars as STRIPE_WH_SECRET variable.
+
+### Configuring AWS Bucket
+
+- Go to Amzon Web Services page and login or register
+
+- You should be redirected to AWS Managment Console, if not click onto AWS logo in top left corner or click Services icon and choose Console Home
+
+- Below the header AWS Services click into All Services and find S3 under Storage
+
+- Create New Bucket using Create Bucket button in top right hand corner
+
+- Configuration: type in your chosen name for the bucket (preferably matching your heroku app name) and AWS Region closest to you
+
+- Object ownership: ACLs enabled, Bucket owner prefered
+
+- Block Public Access settings: Uncheck to allow public access, Acknowledge that the current settings will result that the objects within the bucket will become public
+
+- Click Create Bucket
+
+- You are redirected to Amazon S3 with list of your buckets. Click into the name of the bucket you just created
+
+- Find the tab Properties on the top of the page: Static website hosting at the bottom of the properties page: clik to edit, click enable, fill in index document: index.html and error.html for error
+
+- On the Permissions tab:
+
+- Cross-origin resource sharing (CORS) Paste in the below code as configuration and save
 
 
- 
+![aws](README/assets/aws1.png)
+
+
+- Bucket Policy within permissions tab: Edit bucket policy Click AWS Policy Generator (top right corner)
+- Select type of policy: S3 Bucket policy Principal: * (allows all) Actions: Get object Amazon Resource Name (ARN): paste from the Edit bucket policy page in permissions Click Add statement Than Click Generate Policy and Copy the policy into bucket policy editor. In the policy code find "Resource" key and add "/*" after the name of the bucket to enable all Save changes
+
+- Access control list (ACL) within permissions tab: click Edit
+- find Everyone (public access) and check List box and save
+
+- Identity and Access Management (IAM) Go back to the AWS Management Console and find IAM in AWS Services
+- side menu - User Groups and click Create Group name group "manage-your-app-name" and click Create group
+
+- side menu - Policies and click Create Policy Click import managed policy - find AmazonS3FullAccess Copy ARN again and paste into "Resource" add list containint two elements "[ "arn::..", ""arn::../*]" First element is for bucket itself, second element is for all files and foldrs in the bucket
+
+- Click bottom right Add Tags, thEn Click bottom right Next: Review Add name of the policy and description
+
+- Click bottom right Create policy
+
+- Attach policy to the group we created:
+- go to User Groups on side menu
+- select your group from the list
+- go to permissions tab and add permissions drop down and choose Attach policies
+- find the policy created above and click button in bottom right Add permissions
+- Create User to go in the group
+- Users in the side menu and click add users
+- User name: your-app-staticfiles-user Check option: Access key - Programmatic access Click button at the bottom right for Next
+
+- Add user group and add user to the group you created earlier Click Next Tags and Next: review and Create user
+- Download .csv file
+- Connect django to AWS S3 bucket
+- install boto3
+- install django-storages
+- freeze to requirements.txt
+- add storages to installed apps in settings.py
+
+![aws](README/assets/aws2.png)
+
+- Go to heroku to set up enviromental variables
+- open CSV file downloaded earlier and copy each variable into heroku Settings
+
+- AWS_STORAGE_BUCKET_NAME AWS_ACCESS_KEY_ID from csv AWS_SECRET_ACCESS_KEY from csv USE_AWS = True remove DISABLE_COLLECTSTATIC variable from heroku
+
+- Create file in root directory custom_storages.py
+
+![aws](README/assets/aws3.png)
+
+- Go to settings.py and add the AWS settings
+
+![aws](README/assets/aws4.png)
+
+- To load the media files to S3 bucket
+- Go to your S3 bucket page on AWS. Create new folder "media"
+- go to the media folder and click Upload
 
 
  ## Cloning
