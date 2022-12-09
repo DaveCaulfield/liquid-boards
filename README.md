@@ -471,8 +471,10 @@ Please see the [Testing](testing.md) page for details of site testing.
  ### Local Environment
 
  - Create a workspace on your local IDE or use gitpods cloud based virtual enviroment.
- - Create an env.py file with variables for database url, secret key, media storage url
+ - Create an env.py file with variables for database url, secret key
  - follow the steps above for setting up heroku.
+ - Add Secret keys as required for Stripe, AWS, PostgreSQL
+ - Run the command  pip3 install -r requirements.txt
 
 
 ### Stripe keys
@@ -587,5 +589,22 @@ Please see the [Testing](testing.md) page for details of site testing.
  
  ## Credits
 
+- [Blue Tomato](https://www.blue-tomato.com/) - for product content and images
+- [RawPixel](https://www.rawpixel.com/) - for the hompepage background image
+- [Unsplash](https://unsplash.com/) - for the sites shop/staff photo images
+- [Poonam Soni](https://codepen.io/poonam-adlakha/pen/QWajGqL) - for insprirtion and code structure for the Shop Now button
+- [Bootstrap](https://getbootstrap.com/) - used for site layout and styling
+- [Adobe color](https://color.adobe.com/create/image) - used to match the color theme for the site
+- [Favicon.io](https://favicon.io/) - used to generate favicon
+- [Code Institute/Boutique Ado](https://codeinstitute.net/) - used as a basis for the e-commerce function of the site
+- [Logo.com](https://logo.com/) - used to create the company logo
+- [Mailchimp](https://mailchimp.com/) - used to create the sites newsletter subscription
+- [Django Docs](https://docs.djangoproject.com/en/4.0/) - for Django reference
+
+
 ## Acknowledgements
+This site was built as my Portfolio 5 Project for the Full Stack Software Developer Diploma at the Code Institute.
+I would like to thank my cohort facilitator Kasia Bogucka, my mentor Brian Macharia, the Slack community, Tutor support and Student Care for the help and support provided to me throughout this project.
+
+[Back to top](#Liquid-Boards)
 
