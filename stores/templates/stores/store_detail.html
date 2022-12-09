@@ -30,10 +30,10 @@
 
 
                     {% if store.logo_image %}
-                    <img img class="card-logo_store_details" src="{{ store.logo_image.url }}"       
+                    <img class="card-logo_store_details" src="{{ store.logo_image.url }}"       
                         alt="liquid boards logo sunset-text on black background">
                     {% else %}
-                    <img img class="card-logo_store_details" src="{{ MEDIA_URL }}noimage.png"
+                    <img class="card-logo_store_details" src="{{ MEDIA_URL }}liquid-boards-logo.png"
                         alt="liquid boards logo sunset-text on black background">
                     {% endif %}
 
@@ -58,13 +58,14 @@
             <div class="row">
             <!-- Display staff image -->
                 <div class="staff_img_detail w-100 h-100 mt-3" role="img" aria-label="image for liquid boards local shop staff">
-                    {% if "staff_placeholder" in staff.staff_photo.url %}
-                    <img class="card-staff_img_detail "
-                    src="{{ MEDIA_URL }}noimage.png" 
-                        alt="default image for staff">
+
+                    {% if staff.staff_image %}
+                    <img class="card-staff_img_detail" src="{{ staff.staff_image }}"       
+                        alt="image of staff">
                     {% else %}
-                    <img class="card-staff_img_detail" src=" {{ staff.staff_image.url }}" alt="image of staff">
-                    {% endif %}
+                    <img class="card-staff_img_detail"  src="{{ MEDIA_URL }}sunset-skater2.jpg"
+                        alt="default image for staff">
+                    {% endif %}       
 
                 </div>
             </div>
