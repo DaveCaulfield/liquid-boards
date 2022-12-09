@@ -13,7 +13,7 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
-
+<!-- Product Detail page -->
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
@@ -66,6 +66,7 @@
                                             </span>
                                         </button>
                                     </div>
+                                    <!-- Quantity input -->
                                     <input class="form-control qty_input" type="number" name="quantity" value="1"
                                         min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                     <div class="input-group-append">
@@ -79,7 +80,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- Buttons -->
                         <div class="col-12">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
@@ -103,15 +104,13 @@
     <div class="card-body ">
 
         <h3 class=" reviews-header text-center text-black">  {{ product.name }} Reviews</h3>
-        <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+        <!-- loop through reviews and populate  -->
         {% for review in reviews %}
         <div class=" text-muted mt-4 " style="padding: 5px;">
 
             <!-- The body of the comment goes before the | -->
-            <p>
-                
-                    {{ review.body | linebreaks }}
-                
+            <p>               
+                {{ review.body | linebreaks }}               
             </p>
             
             <p class="text-silver mt-4">
@@ -133,11 +132,11 @@
                 {% endif %}
                 {% endif %}
         </div>
-        <!-- Our for loop ends here -->
+        <!-- for loop ends here -->
         {% endfor %}
     </div>
 
-
+    <!-- Review form for authenictaed users -->
     {% if user.is_authenticated %}
     <div class="card-body ">
 

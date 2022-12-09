@@ -18,7 +18,7 @@
 
 {% block content %}
 
-<!-- Stores section -->
+<!-- Stores page -->
 <section id="local-shops">
     <div class=" col-lg-8 mb-2 mt-3 mb-3 offset-lg-2 text-center">
         <h2 class="font-weight-bold">Local Skateshops</h2>
@@ -46,26 +46,18 @@
                                             <img class="card-img-top" src="{{ store.logo_image.url }}"       
                                                 alt="liquid boards logo sunset-text on black background">
                                             {% else %}
-                                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png"
+                                            <img class="card-img-top" src="{{ MEDIA_URL }}liquid-boards-logo.png"
                                                 alt="liquid boards logo sunset-text on black background">
                                             {% endif %}
 
-                                        
-                                            <!-- {% if "logo_placeholder" in store.logo_image.url %}
-                                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png"
-                                                alt="default logo for store">
+                                            {% if store.store_image %}
+                                            <img class="card-img-bottom" src="{{ store.store_image.url }}"       
+                                                alt="liquid boards logo sunset-text on black background">
                                             {% else %}
-                                            <img class="card-img-top" src=" {{ store.logo_image.url }}"
-                                                alt="image logo for store">
-                                            {% endif %} -->
-
-                                            {% if "placeholder" in store.store_image.url %}
-                                                <img class="card-img-bottom pb-1" src="{{ MEDIA_URL }}noimage.png"
-                                                    alt="default feature image for store">
-                                            {% else %}
-                                                <img class="card-img-bottom pb-1" src=" {{ store.store_image.url }}"
-                                                    alt="feature image for store">
+                                            <img class="card-img-bottom" src="{{ MEDIA_URL }}noimage.png"
+                                                alt="liquid boards logo sunset-text on black background">
                                             {% endif %}
+
                                             <div class="image-flash">
                                             </div>
 

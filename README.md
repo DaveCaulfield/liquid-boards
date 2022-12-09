@@ -584,9 +584,6 @@ Please see the [Testing](testing.md) page for details of site testing.
 
   To fork the project go to the main repository page. At the top right of the page, click the Fork icon. A forked copy of the repository will appear in your Repositories page.
 
-
-
- 
  ## Credits
 
 - [Blue Tomato](https://www.blue-tomato.com/) - for product content and images

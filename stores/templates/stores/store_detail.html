@@ -27,13 +27,18 @@
 
                 <!-- Display store logo image -->
                 <div class="img_container bg-black mb-5" role="img" aria-label="image of Liquid Boards Local Skateshop logo - sunset text on black background">
-                    {% if "logo_placeholder" in stores.logo_image.url %}
-                    <img class="card-logo_store_details"
-                    src="{{ MEDIA_URL }}noimage.png"
-                    alt="default logo for store - sunset text on black background">
+
+
+                    {% if store.logo_image %}
+                    <img img class="card-logo_store_details" src="{{ store.logo_image.url }}"       
+                        alt="liquid boards logo sunset-text on black background">
                     {% else %}
-                    <img class="card-logo_store_details" src=" {{ store.logo_image.url }}"  alt="image for shop logo-  sunset text on black background">
+                    <img img class="card-logo_store_details" src="{{ MEDIA_URL }}noimage.png"
+                        alt="liquid boards logo sunset-text on black background">
                     {% endif %}
+
+
+                  
                 </div>
                 <div class="card-text text-grey text-center col-lg-6 offset-lg-3">
                     <p class="pt-5 mt-5"> {{ store.about }}</p>
