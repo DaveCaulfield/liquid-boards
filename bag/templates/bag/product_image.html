@@ -1,7 +1,8 @@
+<!--  include Product Image -->
 {% if item.product.image %}
-<img class="img-fluid rounded" src="{{ item.product.image.url }}"
+<img class="img-fluid rounded d-none d-md-block" src="{{ item.product.image.url }}"
     alt="{{ item.product.name }}">
 {% else %}
-<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png"
+<img class="img-fluid rounded d-none d-md-block" src="{{ MEDIA_URL }}noimage.png"
     alt="{{ item.product.name }}">
 {% endif %}
