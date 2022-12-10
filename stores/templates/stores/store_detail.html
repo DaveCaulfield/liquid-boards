@@ -19,18 +19,19 @@
 
 <div class="overlay"></div>
 <div class="container ">
-    
-<!-- Display Store Details -->
+
+    <!-- Display Store Details -->
     <div class="row">
         <div class="col  mb-4 mt-3">
             <div class="card-body mt-2">
 
                 <!-- Display store logo image -->
-                <div class="img_container bg-black mb-5" role="img" aria-label="image of Liquid Boards Local Skateshop logo - sunset text on black background">
+                <div class="img_container bg-black mb-5" role="img"
+                    aria-label="image of Liquid Boards Local Skateshop logo - sunset text on black background">
 
 
                     {% if store.logo_image %}
-                    <img class="card-logo_store_details" src="{{ store.logo_image.url }}"       
+                    <img class="card-logo_store_details" src="{{ store.logo_image.url }}"
                         alt="liquid boards logo sunset-text on black background">
                     {% else %}
                     <img class="card-logo_store_details" src="{{ MEDIA_URL }}liquid-boards-logo.png"
@@ -41,35 +42,35 @@
                 <div class="card-text text-grey text-center col-lg-6 offset-lg-3">
                     <p class="pt-5 mt-5"> {{ store.about }}</p>
 
-                </div>        
-                
+                </div>
+
             </div>
         </div>
     </div>
 
     <h3 class=" reviews-header text-center text-muted"> Meet the Team</h3>
 
-    <!-- We want a for loop inside the empty control tags to iterate through each staff member in staff -->
+    <!-- for loop inside the empty control tags to iterate through each staff member in staff -->
     {% for staff in staff %}
 
     <div class="staff-card col-lg-10 offset-lg-1  col-xl-8 offset-lg-2 card mb-1  mt-3 ">
 
         <div class="card-body">
             <div class="row">
-            <!-- Display staff image -->
-                <div class="staff_img_detail w-100 h-100 mt-3" role="img" aria-label="image for liquid boards local shop staff">
+                <!-- Display staff image -->
+                <div class="staff_img_detail w-100 h-100 mt-3" role="img"
+                    aria-label="image for liquid boards local shop staff">
 
                     {% if staff.staff_image %}
-                    <img class="card-staff_img_detail" src="{{ staff.staff_image }}"       
-                        alt="image of staff">
+                    <img class="card-staff_img_detail" src="{{ staff.staff_image.url }}" alt="image of staff">
                     {% else %}
-                    <img class="card-staff_img_detail"  src="{{ MEDIA_URL }}sunset-skater2.jpg"
+                    <img class="card-staff_img_detail" src="{{ MEDIA_URL }}sunset-skater2.jpg"
                         alt="default image for staff">
-                    {% endif %}       
+                    {% endif %}
 
                 </div>
             </div>
-            <!-- The store address and deatils-->
+            <!-- The store address and details-->
             <div class=" text-muted mt-4 ">
                 <p>
                     <strong class="text-black">
@@ -101,8 +102,6 @@
     <!-- for loop ends here -->
     {% endfor %}
 
-
-
     <!-- Display Store Details -->
     <div class="row">
         <div class="col  mb-4 mt-3">
@@ -126,7 +125,6 @@
             </div>
         </div>
     </div>
-
 
 </div>
 {% endblock content %}

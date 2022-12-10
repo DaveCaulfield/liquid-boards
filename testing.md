@@ -3,6 +3,7 @@
 
 - The deployed site was checked for appearance, responsiveness and funcionality to make sure it worked as expected for mobile, tablet, laptop and desktop devices and also for different browser types.
 
+Back to [README.md](README.md)
 
 
 ## Code Vaildation
@@ -29,7 +30,7 @@
 - there is also a js script from mailchimp for the sites newsletter that showed up some warnings.
 
 
-Back to [README.md](README.md)
+[Back to top](#Testing) Back to [README.md](README.md)
 
 
 ## Manual Testing
@@ -59,7 +60,7 @@ Back to [README.md](README.md)
     - Responsiveness
     - Functionality 
 
-Back to [README.md](README.md)
+[Back to top](#Testing) Back to [README.md](README.md)
 
 
 ## Bugs & Issues
@@ -89,4 +90,5 @@ Back to [README.md](README.md)
 
 ![Lighthouse](README/assets/lighthouse.png)
 
-Back to [README.md](README.md)
+
+[Back to top](#Testing) Back to [README.md](README.md)

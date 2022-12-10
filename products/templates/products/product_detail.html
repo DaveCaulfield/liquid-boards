@@ -25,7 +25,8 @@
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="image of {{ product.name }}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                        alt="image of {{ product.name }}">
                 </a>
                 {% endif %}
 
@@ -98,39 +99,36 @@
         </div>
     </div>
 </div>
-
-
+<!-- Reviews page  -->
 <div class="reviews-card col-md-8 offset-md-2 card mb-1  mt-3 ">
     <div class="card-body ">
 
-        <h3 class=" reviews-header text-center text-black">  {{ product.name }} Reviews</h3>
+        <h3 class=" reviews-header text-center text-black"> {{ product.name }} Reviews</h3>
         <!-- loop through reviews and populate  -->
         {% for review in reviews %}
         <div class=" text-muted mt-4 " style="padding: 5px;">
 
             <!-- The body of the comment goes before the | -->
-            <p>               
-                {{ review.body | linebreaks }}               
+            <p>
+                {{ review.body | linebreaks }}
             </p>
-            
+
             <p class="text-silver mt-4">
-                <span >
+                <span>
                     by {{ review.author }} {{ review.created_on | date:" @ H:i j F Y " }}
                 </span>
             </p>
-            <span class=" text-muted ">
+            <span class="text-muted"></span>
 
-            </span>
-            
             {% if request.user.is_authenticated  %}
             {% if request.user|lower == review.author|lower or request.user.is_superuser %}
 
-                <small >
-                    <a href="{% url 'edit_review' review.id %}">Edit</a> |
-                    <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
-                </small>
-                {% endif %}
-                {% endif %}
+            <small>
+                <a href="{% url 'edit_review' review.id %}">Edit</a> |
+                <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+            </small>
+            {% endif %}
+            {% endif %}
         </div>
         <!-- for loop ends here -->
         {% endfor %}

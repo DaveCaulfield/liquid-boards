@@ -9,27 +9,27 @@
 
 {% block content %}
 
-
 <!-- Home Page -->
 <section id="hompage">
-<div class="container-fluid bg-black ">
-    <div class="row">
-        <div class="col-12 px-0 py-0" role="img" aria-label="Homepage image of skater at sunset">
-            <img src="{{ MEDIA_URL }}sunset-skater.jpg" alt="image of skater at sunset"
-                class="sunset img-fluid my-auto">
-        </div>
+    <div class="container-fluid bg-black ">
+        <div class="row">
+            <!-- Background image -->
+            <div class="col-12 px-0 py-0" role="img" aria-label="Homepage image of skater at sunset">
+                <img src="{{ MEDIA_URL }}sunset-skater.jpg" alt="image of skater at sunset"
+                    class="sunset img-fluid my-auto">
+            </div>
+            <!-- Shop Now Button -->
+            <div class="col-12 my-2 text-center ">
+                <button class="shop-button" onclick="window.location.href='products';">SHOP NOW</button>
+            </div>
 
-        <div class="col-12 my-2 text-center ">
-            <button class="shop-button" onclick="window.location.href='products';">SHOP NOW</button>            
-        </div>
-
-        <div id="delivery-banner" class="col-12 text-center mx-0 px-0">
-            <div class="col bg-black ">
-                <h4 class="text-white my-1 py-5">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>                
-            </div>            
+            <div id="delivery-banner" class="col-12 text-center mx-0 px-0">
+                <div class="col bg-black ">
+                    <h4 class="text-white my-1 py-5">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 </section>
 
 {% endblock %}
