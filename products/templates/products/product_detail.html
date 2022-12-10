@@ -35,10 +35,10 @@
         <div class="col-12 col-md-6 col-lg-4 pl-1">
 
             <div class="product-details-container mb-5 mt-md-5">
-                <p class="mb-0">{{ product.brand }} {{ product.name }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                <p class="mb-0 pl-1">{{ product.brand }} {{ product.name }}</p>
+                <p class="lead mb-0 pl-1 text-left font-weight-bold">€{{ product.price }}</p>
 
-                <p class="small mt-1 mb-0">
+                <p class="small mt-1 mb-0 pl-1">
                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                         <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                     </a>
@@ -50,12 +50,12 @@
                 </small>
                 {% endif %}
 
-                <p class="mt-3">{{ product.description }}</p>
+                <p class="mt-3 pl-1">{{ product.description }}</p>
                 <!-- form to add item to bag -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
-                        <div class="col-12">
+                        <div class="col-12 pl-1">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group ">
                                 <div class="input-group input-group-product">
