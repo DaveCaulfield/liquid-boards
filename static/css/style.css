@@ -31,7 +31,7 @@ h2 {
 }
 
 .input-group {
-  width: 150px;
+  width: 100px;
   max-width: 85vw;
 }
 
@@ -348,8 +348,6 @@ input[name='q']::placeholder {
     display: none;
   }
 }
-
-
 
 
 allauth-form-inner-content p {
