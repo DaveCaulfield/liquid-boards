@@ -343,10 +343,14 @@ input[name='q']::placeholder {
       height: calc(100vh - 260px);
   }
 
-
   .about-logo {
     display: none;
   }
+
+  .input-group {
+    width: 150px;
+  }
+
 }
 
 
