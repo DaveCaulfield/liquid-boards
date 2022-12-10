@@ -35,6 +35,10 @@ h2 {
   max-width: 85vw;
 }
 
+.input-group-product {
+  width: 150px;
+}
+
 .shop-button {
   color: #F2913D;
   box-shadow: 3px 3px 20px #F2913D,
@@ -347,9 +351,6 @@ input[name='q']::placeholder {
     display: none;
   }
 
-  .input-group-product {
-    width: 150px;
-  }
 
 }
 
