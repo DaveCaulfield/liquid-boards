@@ -347,7 +347,7 @@ input[name='q']::placeholder {
     display: none;
   }
 
-  .input-group {
+  .input-group-product {
     width: 150px;
   }
 
