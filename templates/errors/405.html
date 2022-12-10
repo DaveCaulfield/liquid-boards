@@ -1,8 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'stores/css/stores.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- error 405 page -->
+<div class="overlay"></div>
+
+<div class="row">
+    <div class="col mb-5 mt-3">
+        <div class="card-body mt-2 ">
+            <!-- Display logo image -->
+            <div class="img_container about-logo bg-black">
+                <img class="card-logo_store_details" src="{{ MEDIA_URL }}noimage.png" alt="default image for logo">
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
 </div>
+
 <div class="container ">
     <div class="row ">
         <div class=" col my-auto text-center logo-font text-black">

@@ -5,9 +5,8 @@
 <link rel="stylesheet" href="{% static 'stores/css/stores.css' %}">
 {% endblock %}
 
-
 {% block content %}
-
+<!-- error 403 page -->
 <div class="overlay"></div>
 
 <div class="row">
@@ -15,26 +14,23 @@
         <div class="card-body mt-2 ">
             <!-- Display logo image -->
             <div class="img_container about-logo bg-black">
-                <img class="card-logo_store_details"
-                src="{{ MEDIA_URL }}noimage.png"
-                    alt="default image for logo">
+                <img class="card-logo_store_details" src="{{ MEDIA_URL }}noimage.png" alt="default image for logo">
             </div>
         </div>
     </div>
 </div>
-
-
 
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
 </div>
+
 <div class="container ">
     <div class="row ">
         <div class=" col my-auto text-center logo-font text-black">
             <h1>403</h1>
-            
+
             <h3 class="text-black pt-4">Sorry, you don't have permission to acces that page.</h3>
             <div class="my-5">
                 <h4>

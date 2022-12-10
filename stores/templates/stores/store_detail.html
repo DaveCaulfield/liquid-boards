@@ -10,7 +10,7 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
-
+<!--  Store Details page -->
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -29,7 +29,6 @@
                 <div class="img_container bg-black mb-5" role="img"
                     aria-label="image of Liquid Boards Local Skateshop logo - sunset text on black background">
 
-
                     {% if store.logo_image %}
                     <img class="card-logo_store_details" src="{{ store.logo_image.url }}"
                         alt="liquid boards logo sunset-text on black background">
@@ -37,11 +36,10 @@
                     <img class="card-logo_store_details" src="{{ MEDIA_URL }}liquid-boards-logo.png"
                         alt="liquid boards logo sunset-text on black background">
                     {% endif %}
-
                 </div>
+
                 <div class="card-text text-grey text-center col-lg-6 offset-lg-3">
                     <p class="pt-5 mt-5"> {{ store.about }}</p>
-
                 </div>
 
             </div>
