@@ -196,6 +196,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 - The bag total, delivery cost and Grand Total are also clear to see for the user.
 - A message is displayed to the user if they are under the 200 euro free delivery threshold.
 - The message informs the user how much more they need to spend to qualify for free delivery.
+- The product image is removed on mobile screens to give a better responive display to the user.
 
 ### Checkout
 
@@ -208,9 +209,12 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 - An order summary is displayed with product and price information.
 - A Payment field takes the the users credit card details.
 
-![Checkout Page](README/assets/features/success_page.png)
 
-- A success page is displayed after a user completes their purchase.
+### Thank you page
+
+![Thank you page](README/assets/features/success_page.png)
+
+- A success message and Thank you page is displayed after a user completes their purchase.
 
 
 ### Product Reviews
@@ -219,8 +223,8 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 - A clean and simple review page is dispalyed below the product details.
 - All user of the site can read the reviews which helps potential buyers.
-- A user must have account to write a review.
-- A user can edit or delete their own reviews if needed.
+- A user must have an account to write a review.
+- A signed in user can edit or delete their own reviews if needed.
 - An admin user can edit or delete all users reviews if needed.
 
 
@@ -228,12 +232,12 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ![Review form](README/assets/features/review_form.png) 
 - If a user is signed into their account a review form is displayed for them to easily add review.
 - A signed in user will also see an Edit & Delete option for any of their posted reviews.
+- A signed in user can easily Delete any of their posted reviews by selecting the Delete button.
 
 
 ### Edit Review Form
 ![Edit Review form](README/assets/features/edit_review.png) 
-- A signed in user can easily Edit any of their posted reviews.
-- A signed in user can easily Delete any of their posted reviews by selecting the Delete button.
+- A signed in user can easily Edit any of their reviews by updating their text and pressing the submit button.
 
 
 ### Product Management
@@ -244,7 +248,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 - A product management fetaure is available to a superuser.
 - If a superuser is signed in they have a product management link available in their account menu.
-- The product management feature allows the superuser to add, edit or delet products from the frontend.
+- The product management feature allows the superuser to add, edit or delete products from the frontend.
 
 ### Local Shops
 
@@ -256,7 +260,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ### Local Shop Details
 
 ![Shop Details](README/assets/features/shop_details1.png) 
-- The Shop Details page displays a paragraph about the shop.
+- The Shop Details page displays a paragraph overview about the shop.
 
 
 ### Meet the Team
@@ -264,7 +268,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ![Shop Details](README/assets/features/shop_details2.png)
 
 - The Meet the Team section introduces the user to the shops staff.
-- A photo and bio is displayed for each meber of staff.
+- A photo and bio is displayed for each staff member.
 
 
 ### Shop Address/Contact
@@ -278,10 +282,10 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ![Blog](README/assets/features/blog.png)
 
-- The site has a blog section allowing the Liquid Board admins to post.
+- The site has a blog section allowing the Liquid Boards admins to post blog articles.
 - The site/shop admins can post blog posts from the application backend.
 - The blog posts are clearly displayed for the user with a blog image, title, author and excerpt displayed.
-- A user that is signed in can like a blog post.
+- A user that is signed in can like and comment on a blog post.
 - The Blog styling is consitent with the rest of the sites color scheme and layout which gives a good user experience.
 
 
@@ -300,7 +304,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ![Blog comments](README/assets/features/blog_comments.png)
 
 - Blog comments are displayed below the blog post.
-- A success message is displayed to the user when they have successfully submited a comment.
+- A success message is displayed to the user when they have successfully submitted a comment.
 
 
 ### Blog Comment form
@@ -427,7 +431,7 @@ Please see the [Testing](testing.md) page for details of site testing.
 
 ### Blog
 - The site has a Blog feature which the shop owners can upload relevant and interesting blogposts to. 
-- There is a comments are for users to add comments which creates further engagement with the community.
+- There is a comments section for users to add comments which creates further engagement with the community.
 
 ### Newsletter
 - The site has a Newsletter feature allowing users to signup to keep updated on any offers.
@@ -454,10 +458,9 @@ Please see the [Testing](testing.md) page for details of site testing.
 - Both Short-tail keywords and Long-tail phrases were researched for the target audience.
 - Keywords were tried out on Google and the autocomplete and relevant suggestions returned were helpful in narrowing down suitable keywords and long-tail phrases.
 
-- Semantic HTML best parctices were also followed throughout development sucha the the use of header, section, footer and image alt tags.
+- Semantic HTML best practices were also followed throughout development such as the use of header, section, footer and image alt tags.
 - Semantic HTML tags are important for SEO because they indicate the role of the content within the tags. Pages with correctly implemented semantic HTML have an advantage in SEO over those that don’t. 
 - Rel attributes noopener and noreferrer were also used on any links opening external sites.
-
 
 
 ## Technologies Used
@@ -479,6 +482,7 @@ Please see the [Testing](testing.md) page for details of site testing.
 
 ### Other Technologies
 - AWS - used for media hosting service
+- ElephantSQL - used for the database
 - Git- used for version control 
 - GitHub - used for hosting the code repository
 - Heroku - used as the cloud based deployment platform

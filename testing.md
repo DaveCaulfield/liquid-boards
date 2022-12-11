@@ -11,7 +11,7 @@ Back to [README.md](README.md)
 
 
 ### Python validation
-- Flake8 was used during development to catch any python code errors or warnings. Issues flaaged such as line too long or whitespace have been fixed. 
+- Flake8 was used during development to catch any python code errors or warnings. Issues flagged such as line too long or whitespace have been fixed. 
 - There are lines of code created by Django with warning messages that have not been altered. 
 
 ### HTML Vaildation
@@ -71,7 +71,7 @@ Back to [README.md](README.md)
 
 ![save_profile_bug](README/assets/save_profile1.png)
 
-- Instead of getting the saved instance of the form with the saved details the my code was also getting the request Method of the form.
+- Instead of getting the saved instance of the form with the saved details - my code was getting the request Method of the form.
 
 ![save_profile_bug](README/assets/save_profile2.png)
 
