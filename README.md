@@ -127,6 +127,21 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ![landing mobile](README/assets/features/mobile_landing_page.png) 
 
+### Sign up
+
+![login nav menu](README/assets/features/sign_in_nav.png)
+
+![Sign up](README/assets/features/sign_up.png)
+
+- From the navigation menu users can easily and intuitively register to create a personal account 
+- Having an account allows a user to save billing details, add product reviews, comment and like blog posts.
+
+### Sign in
+
+![Sign in](README/assets/features/sign_in.png)
+
+- From the navigation menu users can easily sign in to their accounts.
+- A forgot password feature alllows a user to reset their password.
 
 ### The footer
 
@@ -169,6 +184,33 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 - The product details page clearly displays the product details to the user.
 - A Keeping shooping option and an Add to Bag option are easily available to the user.
 - The layout, styling and functionality of the page lead to a great UX and UI experience for the user.
+
+### Shopping Bag
+
+![Shopping Bag Page](README/assets/features/shopping_bag.png) 
+
+![Shopping Bag Nobile Page](README/assets/features/shopping_bag_mobile.png) 
+
+- The shopping Bag page follows the consistent styling throughout the site which adds to the user experience.
+- The product image, name, price, quanity, and sub total are clearly displayed to the user.
+- The bag total, delivery cost and Grand Total are also clear to see for the user.
+- A message is displayed to the user if they are under the 200 euro free delivery threshold.
+- The message informs the user how much more they need to spend to qualify for free delivery.
+
+### Checkout
+
+![Checkout Page](README/assets/features/checkout1.png) 
+
+![Checkout Page](README/assets/features/checkout2.png) 
+
+- The checkout page allows the user to fill out their name and address details.
+- The site allows for a signed in user to save these details which improves the user experience.
+- An order summary is displayed with product and price information.
+- A Payment field takes the the users credit card details.
+
+![Checkout Page](README/assets/features/success_page.png)
+
+- A success page is displayed after a user completes their purchase.
 
 
 ### Product Reviews
