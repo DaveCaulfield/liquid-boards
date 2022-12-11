@@ -236,6 +236,16 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 - A signed in user can easily Delete any of their posted reviews by selecting the Delete button.
 
 
+### Product Management
+
+![Product Management](README/assets/features/product_management_nav.png) 
+
+![Product Management](README/assets/features/product_management.png) 
+
+- A product management fetaure is available to a superuser.
+- If a superuser is signed in they have a product management link available in their account menu.
+- The product management feature allows the superuser to add, edit or delet products from the frontend.
+
 ### Local Shops
 
 ![Local Shops](README/assets/features/all_shops.png) 
