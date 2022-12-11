@@ -348,7 +348,7 @@ input[name='q']::placeholder {
   }
 
   .about-logo {
-    display: none;
+    /* display: none; */
   }
 
 
