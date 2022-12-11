@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import handler404, handler400, handler403, handler500
+from .views import handler400, handler403, handler404, handler405, handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),

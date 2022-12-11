@@ -1,11 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.db.models import Q
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Blog, Comment
-from profiles.models import UserProfile, User
+from profiles.models import UserProfile
 from .forms import CommentForm
 
 
