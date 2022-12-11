@@ -186,7 +186,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# ------------ AWS settings
+# AWS settings
 if 'USE_AWS' in os.environ:
 
     # Cache control
