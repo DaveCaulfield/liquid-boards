@@ -95,18 +95,18 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ## Features
 
 ### The Nav Bar
+
+### Desktop Navbar
+![Desktop Navbar](README/assets/navbar_desktop.png)
+
 - The navbar sits at the top each page with a black background and silver text. 
 - The nav link text changes to sunset orange #F2913D when hovered on.
 - The Liquid Boards Logo is displayed in the navbar and is a link back to the homepage.
 - The shopping bag icon changes color to sunset orange #F2913D if an item has been added.
 - The layout and styling give a warm and premium feel to the user experience and allows the user to easily navigate the site.
 
-
-### Desktop Navbar
-![Desktop Navbar](README/assets/navbar_desktop.png)
-
 ![Onlineshop Links](README/assets/onlineshop.png)
-- There are dropdown links for the Online Shop menu allowing user to easily access the different categories of products available.
+- There are dropdown links for the Online Shop menu allowing users to easily access the different categories of products available.
 
 ![Local Shop Links](README/assets/local_shops.png)
 - There are dropdown links for the Local Shops menu allowing user to easily access the different Local Shops available.
@@ -121,13 +121,13 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ![landing page1](README/assets/features/landing_page.jpg) 
 
-- The landing page contains a hero image of a person skatboarding at sunset. 
-- The image is warm, inviting and inspiriing to the target audience.
+- The landing page contains a hero image of a person skateboarding at sunset. 
+- The image is warm, positive and inspiring to the target audience.
 - The main colour in the image is a warm sunset orange, this colour is contrasted with the shadowy silhouette of palm trees and people.
 - The hero image is also framed with a black background navbar and footer.
-- A call to action "shop now" button is styled with a black background and the same warm sunset orange color for test and shadow effect.
+- A call to action "shop now" button is styled with a black background and same warm sunset orange color used for the text and shadow effect.
 - The shop now button brings the user into the sites online shop.
-- The coloring and style effects of the landing page are continued throughout the site giving the user a consistent and intuitive user experience.
+- The colouring and style effects of the landing page are continued throughout the site giving the user a consistent and intuitive user experience.
 - The landing page is responsive for mobile devices.
 
 
@@ -139,7 +139,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ![Sign up](README/assets/features/sign_up.png)
 
-- From the navigation menu users can easily and intuitively register to create a personal account 
+- From the navigation menu users can easily and intuitively register to create a personal account. 
 - Having an account allows a user to save billing details, add product reviews, comment and like blog posts.
 
 ### Sign in
@@ -155,8 +155,8 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 - The footer is styled with silver text on black backround and sits at the bottom of each page.
 - There is a newsletter sign up feature located in the footer.
-- The companies social media icon links are in the same color and style as the rest of the site. 
-- The icon color changes to silver to grey when hovered on.
+- The companies social media icon links are in the same color and style throughout the site. 
+- The icon colour changes from silver to grey when hovered on.
 
 
 ### About Page
@@ -165,7 +165,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 - The About page gives clear messaging to the user about Liquid Boards.
 - A strong tagline communicates to the user that Liquid Boards is both an online and local skateshop which is valued in the skate community.
-- A brand logo sits at the top of the page on large screens and is removed for mobile screens.
+- A brand logo sits at the top of the page on large screens and is removed for mobile screen responsiveness.
 
 
 ### Online Shop
@@ -174,22 +174,22 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 - The products in the online shop are cleanly displayed to the user.
 - The page has a light background color and white background on the product cards.
-- This allows users to easily see the product image, product name, price, category.
+- This allows users to easily see the product image, product name, price and category.
 - A search feature is available to the user to search for products on the site.
 - A sorting feature allows the user to sort the displayed products. 
-- Users can also easily navigate to the different categories within the online shop from the navbar
+- Users can also easily navigate to the different categories within the online shop from the navbar.
 
 ![Online shop Links](README/assets/onlineshop.png)
 
 ![Mobile Online shop Links](README/assets/features/mobile_online_shop_categories.png) 
 
-### Product Detail Page
+### Product Details Page
 
-![Product Details Page](README/assets/features/product_detail_page.png) 
+![Product Details Page](README/assets/features/product_details.png) 
 
 - The product details page clearly displays the product details to the user.
-- A Keeping shooping option and an Add to Bag option are easily available to the user.
-- The layout, styling and functionality of the page lead to a great UX and UI experience for the user.
+- A Keeping shopping button and an Add to Bag button are easily available to the user.
+- The layout, styling and functionality of the page create a postive user experience for the user.
 
 ### Shopping Bag
 
@@ -202,7 +202,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 - The bag total, delivery cost and Grand Total are also clear to see for the user.
 - A message is displayed to the user if they are under the 200 euro free delivery threshold.
 - The message informs the user how much more they need to spend to qualify for free delivery.
-- The product image is removed on mobile screens to give a better responive display to the user.
+- The product image is removed on mobile screens to give a better responsive display to the user.
 
 ### Checkout
 
@@ -213,7 +213,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 - The checkout page allows the user to fill out their name and address details.
 - The site allows for a signed in user to save these details which improves the user experience.
 - An order summary is displayed with product and price information.
-- A Payment field takes the the users credit card details.
+- A Payment field allows the user to input credit card details.
 
 
 ### Thank you page
@@ -227,8 +227,8 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ![Product Reviews](README/assets/features/reviews.png) 
 
-- A clean and simple review page is dispalyed below the product details.
-- All user of the site can read the reviews which helps potential buyers.
+- A cleanly designed review section is displayed below a product on the product details page.
+- All site users can read the reviews which helps potential buyers and also helps create community engagement.
 - A user must have an account to write a review.
 - A signed in user can edit or delete their own reviews if needed.
 - An admin user can edit or delete all users reviews if needed.
@@ -236,24 +236,25 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ### Review Form
 ![Review form](README/assets/features/review_form.png) 
-- If a user is signed into their account a review form is displayed for them to easily add review.
+- If a user is signed into their account a review form is displayed for them to easily add a review.
 - A signed in user will also see an Edit & Delete option for any of their posted reviews.
 - A signed in user can easily Delete any of their posted reviews by selecting the Delete button.
 
 
 ### Edit Review Form
 ![Edit Review form](README/assets/features/edit_review.png) 
-- A signed in user can easily Edit any of their reviews by updating their text and pressing the submit button.
+- A signed in user can easily Edit any of their reviews by updating their text in the edit form and pressing the submit button.
 
 
 ### Product Management
 
 ![Product Management](README/assets/features/product_management_nav.png) 
 
-![Product Management](README/assets/features/product_management.png) 
-
 - A product management fetaure is available to a superuser.
 - If a superuser is signed in they have a product management link available in their account menu.
+
+![Product Management](README/assets/features/product_management.png) 
+
 - The product management feature allows the superuser to add, edit or delete products from the frontend.
 
 ### Local Shops
@@ -273,7 +274,7 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ![Shop Details](README/assets/features/shop_details2.png)
 
-- The Meet the Team section introduces the user to the shops staff.
+- The Meet the Team section introduces the shops staff.
 - A photo and bio is displayed for each staff member.
 
 
@@ -289,10 +290,10 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 ![Blog](README/assets/features/blog.png)
 
 - The site has a blog section allowing the Liquid Boards admins to post blog articles.
-- The site/shop admins can post blog posts from the application backend.
+- The site/shop admins can post blog articles from the sites backend application.
 - The blog posts are clearly displayed for the user with a blog image, title, author and excerpt displayed.
 - A user that is signed in can like and comment on a blog post.
-- The Blog styling is consitent with the rest of the sites color scheme and layout which gives a good user experience.
+- The Blog styling is consitent with the rest of the sites colour scheme and layout which gives a good user experience.
 
 
 ### Blog Post
@@ -338,7 +339,31 @@ View the live site here [Liquid Boards](https://liquid-boards.herokuapp.com/)
 
 ## Data Model
 
-![Database Schema](README/assets/schema.png)
+![Database Schema](README/assets/database_schema.png)
+
+- LucidCharts was used to represent the sites models. Django AllAuth was used for user authentication.
+
+- The struture and relationships for the Products, Orders, OrderLineitem, Category, Userprofile models were taken from the Code Institiutes Boutique Ado walkthrough tutorials.
+
+- A Review model was created allowing one product to have many reviews. 
+- The Review model is linked to the Product model which is represented by a one to many relationship. 
+- An author can have many reviews so the Review Model is also linked to the UserProfile model represented by a one to many relationship.
+
+- A Blog model was created which allows one blog to have many comments. 
+- The Blog model is linked to the Comments model which is represented by a one to many relationship. 
+- An author can have many blogs so the Blog Model is also linked to the User model represented by a one to many relationship.
+- A User can write many comments so the Comments model is linked to the UserProfile model by a one to many relationship.
+
+- A Store and StoreAddress model was created for the local shops.
+- A Store can only have one address so the Store model is linked to the StoreAddress model represented by a one to one relationship. 
+
+- A Staff model and StaffAddress model was created for the local shop staff.
+- A Staff member can only have one address so is inked to the StaffAddress model represented with a one to one relationship
+
+- One Store can have many Staff so the Staff model is linked to the Store model represented by a one to many relationship. 
+
+
+- Note - The StaffAddress model is only available to supeusers via the backend application. No staff address or emloyee details are availabe on the site.
 
 
 
